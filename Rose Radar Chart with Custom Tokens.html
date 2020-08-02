@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ZingSoft Demo</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <style>
+    .chart--container {
+      min-height: 530px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .zc-ref {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="myChart" class="chart--container">
+    <a class="zc-ref" href="https://www.zingchart.com/">Powered by ZingChart</a>
+  </div>
+  <script>
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+    let chartConfig = {
+      type: 'radar',
+      theme: 'classic',
+      globals: {
+        fontFamily: 'PT Sans',
+        shadow: false
+      },
+      backgroundColor: '#FFF',
+      title: {
+        text: 'Using Data Values for Tokens',
+        backgroundColor: '#fff',
+        fontSize: '24px'
+      },
+      plot: {
+        animation: {
+          effect: 'ANIMATION_EXPAND_TOP',
+          sequence: 'ANIMATION_BY_PLOT_AND_NODE',
+          speed: 10,
+          delay: 500,
+        },
+        aspect: 'rose'
+      },
+      scaleK: {
+        aspect: 'circle',
+        visible: false
+      },
+      scaleV: {
+        values: '0:100:20',
+        guide: {
+          lineColor: '#333',
+          lineStyle: 'solid',
+          lineWidth: '1px'
+        },
+        item: {
+          color: '#333'
+        },
+        lineColor: '#FFF'
+      },
+      tooltip: {
+        text: '%v% Progress in %data-band',
+        backgroundColor: '#CFF',
+        color: '#333',
+        fontSize: '14px'
+      },
+      series: [{
+        values: [50, 100, 80, 69, 52, 22, 91],
+        url: 'http://www.google.com/#q=%data-band',
+        target: '_blank',
+        backgroundColor: '#0088cc',
+        dataBand: ['Planning', 'Create Time Line', 'Analysis', 'Create Buisness Model', 'Research', 'Implementation', 'Testing']
+      }]
+    };
+
+    zingchart.render({
+      id: 'myChart',
+      data: chartConfig,
+      height: '100%',
+      width: '100%',
+    });
+  </script>
+</body>
+
+</html>

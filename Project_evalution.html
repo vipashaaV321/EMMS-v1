@@ -1,0 +1,189 @@
+<html>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <head>
+<style>
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:rgb(242, 250, 250);
+}
+    #f01{
+        display: none;
+    }
+    .slidecontainer {
+  width: 100%;
+}
+.main{
+  width:90%;
+  height:700px;
+  /* margin:10px; */
+  padding: 50px;
+  background-color:rgb(242, 250, 250);
+  text-align: center;
+}
+.main .folder{
+  background-color: #fff;
+  width:1000px;
+  height: auto;
+  padding: 10px;
+  margin-left: 50px;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 20px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+  /* background-color: #333; */
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 20%;
+  background:#006699;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 10%;
+  background:#4CAF50;
+  cursor: pointer;
+}
+.table{
+                height: 500px;
+                width: 500px;
+                /* background-color: rgb(250, 252, 253); */
+               margin-top: 19px;
+               margin-left: 310px;
+               padding: 27px;
+               /* border-radius: 4%; */
+               /* box-shadow: 3px 3px 7px 3px #717d83; */
+               font-size: 13px;
+                }
+                #b1{
+                    padding: 10px;
+                    height:40px;
+                    width:120px;
+                    color: #fff;
+                    background-color: #006699;
+                    border: none;
+                    margin-left: 0px;
+                    font-size: 15px;
+                    /* margin-right: 10px; */
+                    border-radius: 7%;
+                    margin-top: 5px;
+                }
+                #m{
+                    height:36px;
+                    border-radius: 4%;
+                    border: 1px solid #333;
+                    padding: 5px;
+                }
+                button a{
+                  text-decoration: none;
+                }
+                input[type="file"]{
+                  background-color: #006699;
+                  color: #fff;
+                  padding: 10px;
+                  margin-left: 350px;
+                }
+                button{
+                  background-color: #006699;
+                  color: #fff;
+                  padding: 10px;
+                }
+</style>
+</head>
+ <body>
+  <div class="w3-bar w3-wide w3-padding w3-card" style="background-color: #006699;color: #fff">
+    <a href="Project_evalution.html" class="w3-bar-item w3-button"><i class="fa fa-television" aria-hidden="true"></i> <b>PROJECT</b> EVALUTION</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <!-- <a href="#projects" class="w3-bar-item w3-button">HOME</a> -->
+      <a href="project_mail.html" class="w3-bar-item w3-button">PROJECT_DISTRIBUTION</a>
+      <a href="project.html" class="w3-bar-item w3-button">PROJECTS</a>
+      <!-- <a href="#contact" class="w3-bar-item w3-button">ATTENDENCE & LEAVES</a> -->
+      <!-- <a href="#contact" class="w3-bar-item w3-button">ACHIVEMENTS</a> -->
+      <a href="emms_ss.html" class="w3-bar-item w3-button">LOG_OUT</a>
+    
+    </div>
+  </div>
+   <div class="main">
+     <div class="folder">
+    <h2>Select Uploaded Reports</h2><br>
+ <form>
+  
+  <div class="custom-file mb-3">
+    <input type="file" class="custom-file-input" id="customFile" name="filename">
+    
+  </div><br>
+  
+    <input type="button" name="answer" value="preview pdf" onclick="showDiv()" style="background-color: #006699;color: #fff;padding: 15px;border: none;width:10%" />
+    <input type="button" name="answer" value="Close" onclick="HideDiv()" style="background-color: #006699;color:#fff;padding: 15px;border: none;width: 10%;
+    "/><br><br>
+    
+    <embed src="TEAM_01-PID010_Report.pdf" width="300px" height="300px" style="margin-left: 360px;" id="f01"/>
+    <div class="columns download">
+        <p>
+           <button style="color: #fff;background-color: #006699;padding: 15px;border: none;width: 18%;"><a href="TEAM_01-PID010_Report.pdf" style="color: #fff;"><i class="fa fa-download" aria-hidden="true" style="color: #fff;"></i>FULL PREVIEW</a></button>
+        </p>
+     </div>
+     <br>
+    </div>
+     <h2>Evalute project and give marks out 100</h2><br>
+     <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange" style="margin-left: 45px;"><br>
+        <p style="font-size: 15px;margin-left: 40px;">Marks: <span id="demo"></span></p>
+      </div><hr>
+      <h3 style="margin-left: 45px;font-family: monospace;">Upload Result And Send Mail</h3>
+      <div class="table">
+        <form action="mailto:vipashavaghela321@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="id" size="60" id="m" placeholder="TEAM_ID"><br><br>
+        
+        <input type="text" name="name" size="60" id="m" placeholder="DEPARTMENT"><br><br>
+        
+        <input type="text" name="mail" id="m" size="60" placeholder="E-MAIL_ID_OF_TEAMLEADER"><br><br>
+        
+         <input type="text" name="PROJECT_NAME" size="60" id="m" placeholder="PROJECT_NAME & PROJECT_ID"><br><br>
+         <input type="text" name="COMPANY" id="m" size="60" placeholder="REMARK"><br><br>
+         <input type="textarea" name="TEAM_MEMBERS" id="m" size="60" rows="3" placeholder="COMMENTS" style="height: 60px;"><br><br>
+        <input type="submit" value="SEND_MAIL" id="b1" onclick="alert('mail send successfully')">
+        <input type="reset" value="RESET" id="b1">
+        </form>
+        </div>
+      </div>
+        </body>
+    <script>
+        function showDiv(){
+        document.getElementById('f01').style.display="block";}
+    </script>
+    <script>
+        function HideDiv(){
+        document.getElementById('f01').style.display="none";}
+    </script>
+    <script>
+        var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+    </script>
+    </html>

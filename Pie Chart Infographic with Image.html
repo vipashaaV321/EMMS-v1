@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ZingSoft Demo</title>
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <style>
+    .info {
+      padding: 1rem 0 0;
+      min-height: 529px;
+      background: #fff;
+      box-sizing: border-box;
+    }
+
+    .control-bar {
+      margin: 0 auto;
+      padding: 0 0 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity .3s;
+    }
+
+    .control-bar.loaded {
+      display: flex !important;
+      opacity: 1;
+    }
+
+    .control-bar>div {
+      display: flex;
+      align-items: center;
+    }
+
+    .control-bar>*+* {
+      margin-left: 10px;
+    }
+
+    .control-bar span {
+      margin-left: 7px;
+      display: inline-block;
+    }
+
+    .control-bar select {
+      min-width: 45px;
+      height: 40px;
+      background: #fff;
+      border: 1px solid #ebebeb;
+      border-radius: 4px;
+    }
+
+    .control-bar .sel-wide {
+      min-width: 60px;
+    }
+
+    .control-bar button {
+      min-width: 45px;
+      height: 40px;
+      cursor: pointer;
+      color: #fff;
+      background: #074361;
+      border: 1px solid #074361;
+      border-radius: 4px;
+    }
+
+    .zc-body {
+      background-color: #fff;
+    }
+
+    .zc-ref {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="zc-body">
+
+  <div class="info">
+
+    <div data-jsref="control-bar" class="control-bar" hidden>
+      <div>
+        <select data-jsref="elements">
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6" selected="selected">6</option>
+        </select>
+        <span>elements, </span>
+      </div>
+      <div>
+        <select data-jsref="aperture" class="sel-wide">
+          <option value="180">180</option>
+          <option value="270" selected="selected">270</option>
+          <option value="360">360</option>
+        </select>
+        <span>aperture, starting at</span>
+      </div>
+      <div>
+        <select data-jsref="degrees" class="sel-wide">
+          <option value="0">0</option>
+          <option value="45">45</option>
+          <option value="90">90</option>
+          <option value="135" selected="selected">135</option>
+          <option value="180">180</option>
+          <option value="225">225</option>
+          <option value="270">270</option>
+          <option value="315">315</option>
+        </select>
+        <span>degrees, with</span>
+      </div>
+      <div>
+        <select data-jsref="effects">
+          <option value="-1">no animation</option>
+          <option value="0">effect 0</option>
+          <option value="1" selected="selected">effect 1</option>
+          <option value="2">effect 2</option>
+          <option value="3">effect 3</option>
+          <option value="4">effect 4</option>
+        </select> ,
+      </div>
+      <select data-jsref="sequence">
+        <option value="0">non-sequenced</option>
+        <option value="1" selected="selected">in sequence</option>
+      </select>
+      <button data-jsref="renderBtn">Render</button>
+    </div>
+
+    <div id="myChart">
+      <a href="https://www.zingchart.com/" rel="noopener" class="zc-ref">Powered by ZingChart</a>
+    </div>
+
+  </div>
+
+  <script>
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+    // DEFINE CHART LOCATIONS (IDS)
+    // -----------------------------
+    // Main chart render location
+    var chartId = 'myChart';
+
+
+    // VARS
+    // -----------------------------
+    var oImgCenter = 'data:image/png;base64,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';
+    var sLine = '\uFF3F\uFF3F\uFF3F\uFF3F\uFF3F\uFF3F\uFF3F\uFF3F\uFF3F\uFF3F\uFF3F';
+
+    var aPalette = ['#64D0DA', '#34B2E4', '#065381', '#8B103E', '#E34856', '#FE912A'];
+    var aGradientColors = ['#2CC4D1', '#0B98D0', '#0B4366', '#7B002C', '#C8202F', '#F97801'];
+
+    var aTooltipText = [
+      'Lorem ipsum', 'Lorem ipsum', 'Lorem ipsum', 'Lorem ipsum', 'Lorem ipsum', 'Lorem ipsum',
+      'Lorem ipsum', 'Lorem ipsum', 'Lorem ipsum', 'Lorem ipsum', 'Lorem ipsum', 'Lorem ipsum'
+    ];
+
+
+    // DOM ELEMENTS
+    // -----------------------------
+    var controlBar = document.querySelector('[data-jsref="control-bar"]');
+    var elements = document.querySelector('[data-jsref="elements"]');
+    var aperture = document.querySelector('[data-jsref="aperture"]');
+    var degrees = document.querySelector('[data-jsref="degrees"]');
+    var effects = document.querySelector('[data-jsref="effects"]');
+    var sequence = document.querySelector('[data-jsref="sequence"]');
+    var renderBtn = document.querySelector('[data-jsref="renderBtn"]');
+
+
+    // CHART CONFIG
+    // -----------------------------
+
+    var cdata = {
+      resources: [{
+        type: 'css',
+        url: 'https://fonts.googleapis.com/css?family=Exo+2'
+      }],
+      type: 'pie',
+      plotarea: {
+        margin: 0,
+        backgroundImage: oImgCenter,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: '50% 55%'
+      },
+      scaleR: {
+        aperture: parseInt(aperture.value, 10),
+        refAngle: parseInt(degrees.value, 10)
+      },
+
+      plot: {
+        detach: false,
+        borderWidth: 10,
+        borderColor: '#FFF',
+        slice: '30%',
+        pieTransform: 'callout=22',
+        hoverState: {
+          visible: false
+        }
+      },
+      series: []
+    };
+
+
+    // RENDER CHARTS
+    // -----------------------------
+
+    // On load
+    render();
+    zingchart.load = function(e) {
+      controlBar.classList.add('loaded');
+    }
+    // On button click
+    renderBtn.addEventListener('click', render);
+
+
+    // HELPER FNS
+    // -----------------------------
+
+    function render() {
+      var cdataClone = JSON.parse(JSON.stringify(cdata));
+
+      if (effects.value !== '-1') {
+        cdataClone['plot'].animation = {
+          speed: 200,
+          method: 0,
+          effect: parseInt(effects.value, 10),
+          sequence: parseInt(sequence.value, 10)
+        };
+      }
+
+      var items = parseInt(elements.value, 10);
+
+      for (var i = 0; i < items; i++) {
+        var no = i + 1;
+        cdataClone['series'].push({
+          values: [1],
+          tooltipText: aTooltipText[i],
+          dataNo: ((no <= 9) ? '0' + no : no),
+          valueBox: [{
+            width: 48,
+            height: 48,
+            align: 'center',
+            placement: 'fixed=60%;50%',
+            borderRadius: 23,
+            borderWidth: 0,
+            fontSize: 6,
+            shadow: false,
+            color: '#FFF',
+            decimals: 0,
+            fontFamily: '"Exo 2"',
+            text: '<span style="font-size:23px">%data-no</span><br>' + sLine + '<br><span style="font-size:11px;">\u2002\u2002SAMPLE TEXT</span>'
+          }],
+          backgroundColor: aPalette[i],
+          gradientColors: [aGradientColors[i], aGradientColors[i], aPalette[i], aPalette[i]].join(' '),
+          gradientStops: [0.01, 0.4, 0.409, 0.99].join(' ')
+        });
+      }
+
+      zingchart.render({
+        id: chartId,
+        width: '100%',
+        height: 450,
+        output: 'svg',
+        data: cdataClone
+      });
+    }
+  </script>
+</body>
+
+</html>

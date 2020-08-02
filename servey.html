@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', 'Expenses'],
+          ['2017',  1000,      400],
+          ['2018',  1170,      460],
+          ['2019',  660,       1120],
+          ['2020',  600,      100]
+        ]);
+
+        var options = {
+          title: 'Company Performance',
+          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'DEALS', 'INVEST', 'PROFIT'],
+          ['2017', 10, 400000, 200000],
+          ['2018', 17, 460000, 100000],
+          ['2019', 22, 1120000, 230000],
+          ['2020', 1, 540000, 35900]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'DEALS',
+            subtitle: 'INVEST & PROFIT (2017-2020)',
+          },
+          bars: 'horizontal' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+          <script type="text/javascript">
+            google.charts.load('current', {'packages':['bar']});
+            google.charts.setOnLoadCallback(drawStuff);
+      
+            function drawStuff() {
+              var data = new google.visualization.arrayToDataTable([
+                ['year', 'deals'],
+                ["2015", 20],
+                ["2016", 40],
+                ["2017", 31],
+                ["2018", 12],
+                ["2019", 10],
+                ["2020", 3]
+              ]);
+      
+              var options = {
+                title: 'DEALS',
+                width: 900,
+                legend: { position: 'none' },
+                chart: { title: 'Deals',
+                         subtitle: "" },
+                bars: 'horizontal', // Required for Material Bar Charts.
+                axes: {
+                  x: {
+                    0: { side: 'top', label: 'no. of deals'} // Top x-axis.
+                  }
+                },
+                bar: { groupWidth: "90%" }
+              };
+      
+              var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+              chart.draw(data, options);
+            };
+          </script>
+        
+        
+        
+      
+  </head>
+  <body style="background-color: aliceblue;">
+    <div class="w3-bar w3-wide  w3-card" style="background-color: #006699;color: #fff;padding: 5px;">
+        <a href="notification_emp_emms.html" class="w3-bar-item w3-button"><i class="fa fa-inr" aria-hidden="true" style="color: #fff;font-size: 18px;"></i>Accounting DEPARTMENT</a>
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+          <!-- <a href="cv.html" class="w3-bar-item w3-button">PROFILE</a> -->
+          <!-- <a href="contact_chip.html" class="w3-bar-item w3-button">UPDATES</a> -->
+          <!-- <a href="daily_detail.html" class="w3-bar-item w3-button">DAILY REPORT</a> -->
+          <!-- <a href="leave_request.html" class="w3-bar-item w3-button"><i class="fa fa-bell" aria-hidden="true" style="color: #fff;font-size: 18px;"></i></a> -->
+          <a href="salary.html" class="w3-bar-item w3-button">SALARY MANAGEMENT</a>
+          <a href="log_emms1.html" class="w3-bar-item w3-button" onclick="confirm('are you logging out')">LOG_OUT</a>
+        
+        </div>
+      </div>
+    <div id="chart_div" style="width: 80%; height: 500px;margin-left: 130px;margin-bottom: 15px;margin-top:20px"></div>
+    <div id="barchart_material" style="width: 80%; height: 400px;float: left;margin-left: 130px;"></div><br><br>
+    <div id="top_x_div" style="width: 1000px; height: 400px;float:left;margin-left: 180px;margin-top: 15px;margin-bottom: 10px;"></div>
+  </body>
+</html>

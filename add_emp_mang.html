@@ -1,0 +1,297 @@
+<html>
+    <head>
+        <title>
+            Add EMPLOYEES
+        </title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <style>
+            body{
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: aliceblue;
+            }
+.l{
+    width: 35%;
+    float:left;
+    background-color: aliceblue;
+    height: 600px;
+}
+.r{
+    width: 65%;
+    float: left;
+    height: 600px;
+    padding: 5px;
+    padding-top: 10px;
+}
+#t1{
+    padding: 20px;
+    margin-left: 20px;
+    font-size: 16px;
+    
+}
+input[type=text], select, textarea {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+    margin-bottom: 12px;
+  resize: vertical;
+  background-color: #f9fbfc;
+  
+}
+.s{
+    
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  resize: vertical;
+  background-color: #f9fbfc;
+  
+}
+button{
+    padding: 10px;
+    background-color:#0a4f88;
+    color:#fff;
+    border: none;
+    width: 180px;
+}
+input[type=submit] {
+  background-color: #006699;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  width:200px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 300px;
+}
+
+input[type=submit]:hover {
+  background-color: #d9dfe2;
+  color: #000;
+  
+}
+
+</style>
+</head>
+<body>
+       
+             <div class="w3-bar w3-wide  w3-card" style="background-color: #006699;color: #fff;padding: 5px;">
+            <a href="add_emp_mang.html" class="w3-bar-item w3-button"><i class="fa fa-laptop" aria-hidden="true" style="color: #fff;font-size: 18px;"></i>REGISTERATION</a>
+            <!-- Float links to the right. Hide them on small screens -->
+             <div class="w3-right w3-hide-small">
+             <!-- <a href="https://docs.google.com/spreadsheets/d/1fJjhcKl6Wvn7IUbewuqouiIwaUEuKk_9mLcYnuZU-lE/edit?usp=sharing" class="w3-bar-item w3-button">SCHEDULE</a> -->
+              <a href="daily_detail.html" class="w3-bar-item w3-button">DAILY_REPORT</a>
+              <a href="Employee_table.html" class="w3-bar-item w3-button">MANAGE DATA</a>
+              <a href="biometric.html" class="w3-bar-item w3-button">ATTENDANCE_DATA</a>
+              <a href="data.html" class="w3-bar-item w3-button">EMPLOYEES'_DATA</a>
+              <a href="log_emms1.html" class="w3-bar-item w3-button" onclick="confirm('are you logging out')">LOG_OUT</a>
+            
+        </div>
+         </div>
+          <h3 style="color: #006699;text-align: center;">REGISTER EMPLOYEE TO EMMS</h3>
+          <hr style="border: 1px solid #006699;box-shadow: 3px 3px 3px #ccc;">
+        <div class="l">
+        <div class="im" style="margin-left:25%;margin-top:50%">
+        <img src="admin_blank.jpg" style="width:180px;height:210px;"><br><br>
+        <button>ADD IMAGE</button>
+
+        <br>
+        <br>
+        <br>
+        <form action="mailto:vipashavaghela321@gmail.com" method="post" enctype="text/plain">
+            <table>
+                <tr>
+                
+                    
+                    <td>
+                        <input type="text" name="EID::" id="eid" placeholder="EMP_ID" style="width: 100px;margin-left: 50px;">
+                    </td>
+                    <br>
+                </tr>
+                <tr>
+               <td>
+                    <input type="submit" value="SEND MAIL" style="margin-left: 0;"></td>
+                </tr>
+              
+            </table>
+        </form>
+         </div>
+        </div>
+        <div class="r">
+            <form>
+        <table style="width: 100%;margin-top: 20px;">
+            <tr>
+                
+                <td id="t1" onclick="fn()" id="f" >
+                    FULL NAME
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                
+                <td id="t1">
+                    EMPLOYEE ID
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                
+                <td id="t1">
+                    DATE OF BIRTH
+                </td>
+                <td>
+                    <div class="s">
+                    <input type="date">
+                    </div>
+                </td>
+                <tr>
+                
+                    <td id="t1">
+                        HIRE DATE
+                    </td>
+                    <td>
+                        <div class="s">
+                        <input type="date">
+                        </div>
+                    </td>
+            </tr>
+            <tr>
+                
+                <td id="t1">
+                    PHONE NUMBER
+                </td>
+                <td>
+                    <input type="text">
+                    
+                </td>
+            </tr>
+             <tr>
+                
+            <td id="t1">
+                EMAIL ID
+            </td>
+            <td>
+                <input type="text">
+                
+            </td>
+            </tr>
+            <tr>
+                
+                <td id="t1">
+                    GENDER
+                </td>
+                <td>
+                    <div class="s">
+                        <input type="radio" name="favourite_colour"
+                        value="orange"> MALE
+                        <input type="radio" name="favourite_colour"
+                        value="pink"> FEMALE</div>
+                    </div>
+                </td>
+            </tr
+            >
+            <tr>
+                
+                <td id="t1">
+                    DEPARTMENT
+                </td>
+                <td>
+                    <div class="s">
+                        <input type="checkbox" name="favourite_colour"
+                        value="orange" style="margin-left: 5px;"> MANAGING
+                        <input type="checkbox" name="favourite_colour"
+                        value="orange" style="margin-left: 5px;"> HR
+                        <input type="checkbox" name="favourite_colour"
+                        value="orange" style="margin-left: 5px;"> ACCOUNTING
+                        <input type="checkbox" name="favourite_colour"
+                        value="orange" style="margin-left: 5px;"> R&D
+                        <input type="checkbox" name="favourite_colour"
+                        value="pink" style="margin-left: 5px;"> PROJECT</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                
+                <td id="t1">
+                    JOB EXPERIENCE
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                
+                <td id="t1">
+                    QUALIFICATION
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                
+                <td id="t1">
+                    ADDRESS
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+<td id="t1">
+    CITY
+</td>
+<td>
+    <select id="city" name="city">
+    <option value="AHMEDABAD">AHMEDABAD</option>
+    <option value="MUMBAI">MUMBAI</option>   
+      </select>
+</td>
+            </tr>
+            <tr>
+                <td id="t1">
+                    STATE
+                </td>
+                <td>
+                    <select id="country" name="country">
+                    <option value="GUJRAT">GUJRAT</option>
+                    <option value="MH">MH</option>
+                      </select>
+                </td>
+            </tr>
+                           
+        </table>
+    </form>
+        <br>
+        
+        <input type="submit" value="ADD TO EMMS" onclick="hey()"><br>
+       
+        </div>
+       
+    </body>
+    <script>
+        function hey(){
+            alert("employee registered successfully");
+            console.log('data_added');
+        }
+        function fn(){
+            console.log('firstname stored in db');
+        }
+    </script>
+</html>

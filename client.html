@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box; background-color:#e7f7ff;}
+
+input[type=text], select, textarea {
+  width: 60%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  /* margin-left: 300px; */
+  margin-bottom: 16px;
+  resize: vertical;
+  background-color: #f9fbfc;
+  margin-left: 225px;
+}
+.strip{
+  margin-left: 225px;
+  width: 60%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  /* margin-left: 300px; */
+  margin-bottom: 16px;
+  font-size: 12px;
+  color: #333;
+  resize: vertical;
+  background-color: #f9fbfc;
+}
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  /* background-color:aliceblue; */
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 30px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color:rgb(120, 201, 233);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  /* padding: 16px; */
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+input[type=submit] {
+  background-color: #006699;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 485px;
+}
+
+input[type=submit]:hover {
+  background-color: #d9dfe2;
+  color: #000;
+  
+}
+
+.container {
+  border-radius: 5px;
+  background-color:#e7f7ff;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+
+<div class="w3-bar w3-wide  w3-card" style="background-color: #006699;color: #fff;padding: 5px;">
+  <a href="client.html" class="w3-bar-item w3-button" style="background-color: #006699;"><i class="fa fa-laptop" aria-hidden="true" style="color: #fff;background-color: #006699;"></i>HR DEPARTMENT</a>
+
+  
+  <div class="w3-right w3-hide-small" style="background-color: #006699;">
+   
+    <a href="client_analysis.html" class="w3-bar-item w3-button">CLIENT DETAILS</a>
+    
+    <a href="log_emms1.html" class="w3-bar-item w3-button" onclick="confirm('are you logging out')">LOG_OUT</a>
+  
+  </div>
+</div>
+<div class="container"><div id="mySidebar" class="sidebar" style="background-color: #96cfeb;">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="filter_emp.html" style="font-size: 18px;">EMP DETAILS</a>
+  <a href="train.html" style="font-size: 18px;">TRAINING PROCESS</a>
+  <a href="hr_details.html" style="font-size: 18px;">RECRUITMENT</a>
+
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()" style="background-color: #006699;">☰</button>  
+  
+</div>
+  <h3 style="text-align: center;color: #006699;">ADD CLIENTS' DETAILS</h3><hr style="border: 1px solid #006699;">
+  <form>
+    <input type="text" id="cname" name="cname" placeholder="CLIENT_COMPANY">
+    <input type="text" id="Regid" name="regid" placeholder="REGISTRATION ID">
+    <input type="text" id="Cid" name="Cid" placeholder="CLIENT-ID">
+    <input type="text" id="br" name="branch" placeholder="MAIN BRANCH">
+    <input type="text" id="des" name="MANAGER" placeholder="MANAGER">
+    <input type="text" id="mail" name="email" placeholder="EMAIL-ID"><br>
+    <input type="text" id="mno" name="mno" placeholder="MOBILE NO.">
+    <input type="text" id="Pno" name="Pno" placeholder="NO. OF PROJECTS">
+    <input type="text" id="Dno" name="Dno" placeholder="NO. OF DEALS">
+    
+<br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<script>
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  }
+  </script>
+</body>
+</html>

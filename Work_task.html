@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ZingSoft Demo</title>
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <style>
+    .zc-body {
+      background: #fff;
+    }
+
+    .chart--container {
+      height: 100%;
+      width: 100%;
+      min-height: 530px;
+    }
+
+    .zc-ref {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="zc-body">
+
+  <div id="myChart">
+    <a href="https://www.zingchart.com/" rel="noopener" class="zc-ref">Powered by ZingChart</a>
+  </div>
+
+  <script>
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+    // DEFINE CHART LOCATIONS (IDS)
+    // -----------------------------
+    // Main chart render location
+    var chartId = 'myChart';
+
+
+    // CHART CONFIG
+    // -----------------------------
+    var myConfig = {
+      type: 'mixed',
+      title: {
+        text: 'Sample Burndown Chart',
+        align: 'left',
+        marginLeft: '23%'
+      },
+      legend: {
+        verticalAlign: 'middle',
+        adjustLayout: true
+      },
+      plot: {
+        animation: {
+          effect: 'ANIMATION_SLIDE_TOP',
+          method: 'ANIMATION_BOUNCE_EASE_OUT',
+          sequence: 'ANIMATION_NO_SEQUENCE',
+          speed: 975,
+          delay: 500,
+        },
+      },
+      scaleX: {
+        labels: ['Day <br>1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7', 'Day 8'], //one label for every datapoint
+      },
+      scaleY: {
+        label: {
+          text: 'Remaing effort (hours)',
+          fontSize: 14
+        },
+        guide: { // dashed lines
+          visible: false
+        }
+      },
+      scaleY2: {
+        minValue: 0,
+        maxValue: 100,
+        step: 25, // can define scale step values or default
+        label: {
+          text: 'Remaing and completed tasks',
+          fontSize: 14
+        }
+      },
+      crosshairX: {
+        lineColor: '#424242',
+        lineStyle: 'dotted',
+        lineGapSize: '4px',
+        plotLabel: {
+          backgroundColor: "white",
+          borderColor: "#e3e3e3",
+          borderRadius: "5px",
+          bold: true,
+          fontSize: "12px",
+          fontFamily: "Lato",
+          fontColor: "#2f2f2f",
+          textAlign: 'right',
+          padding: '15px',
+          shadow: true,
+          shadowAlpha: 0.2,
+          shadowBlur: 5,
+          shadowDistance: 4,
+          shadowColor: "#a1a1a1",
+          textAlign: 'left'
+        },
+        scaleLabel: {
+          backgroundColor: '#424242'
+        }
+      },
+      series: [{
+        type: 'line',
+        values: [35, 42, 67, 89, 25, 34, 67, 85].sort().reverse(),
+        text: 'Remaining Tasks',
+        lineColor: '#42a5f5',
+        marker: {
+          visible: 'false'
+        },
+        scales: 'scale-x, scale-y'
+      }, {
+        type: 'line',
+        values: [25, 32, 57, 79, 15, 24, 57, 75].sort().reverse(),
+        text: 'Remaining Effort',
+        lineColor: '#5c6bc0',
+        marker: {
+          type: 'square',
+          backgroundColor: '#5c6bc0'
+        },
+        scales: 'scale-x, scale-y'
+      }, {
+        type: 'line',
+        values: [90, 80, 70, 60, 50, 40, 30, 20],
+        text: 'Completed Tasks',
+        lineColor: '#66bb6a',
+        marker: {
+          visible: false
+        },
+        scales: 'scale-x, scale-y'
+      }, {
+        type: 'bar',
+        values: [5, 10, 6, 3, 6, 2, 0, 9],
+        text: 'Completed Tasks',
+        backgroundColor: '#ffa726',
+        scales: 'scale-x, scale-y-2'
+      }]
+    };
+
+
+    // RENDER CHART
+    // -----------------------------
+    zingchart.render({
+      id: chartId,
+      data: myConfig,
+      height: 560,
+      width: '100%'
+    });
+  </script>
+</body>
+
+</html>

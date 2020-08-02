@@ -1,0 +1,104 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+     <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+  
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['Project',  'Research', 'Implements'],
+            ['Emms with AI', 100,         80],
+            ['Angular HOLO Virtual site',     100,         70],
+            ['Ios-Application with finger Sensor',        80,         30],
+            ['Official Website Instagram',      40,         0],
+          ]);
+  
+          var options = {
+            title: 'Progress Of ongoing Projects',
+            vAxis: {title: 'Progress in %'},
+            isStacked: true
+          };
+  
+          var chart = new google.visualization.SteppedAreaChart(document.getElementById('chart_div'));
+  
+          chart.draw(data, options);
+        }
+      </script>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+  
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['Month', 'No of Projects(Regular)', 'Extra(Projects)'],
+            ['July-August', 2 ,     1],
+            ['September-October',  3,      0],
+            ['November-December',  4,       1],
+            ['January-February',  1,      1]
+          ]);
+  
+          var options = {
+            title: 'Projects',
+            curveType: 'function',
+            legend: { position: 'bottom' }
+          };
+  
+          var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+  
+          chart.draw(data, options);
+        }
+      </script>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+        google.charts.load('current', {'packages':['table']});
+        google.charts.setOnLoadCallback(drawTable);
+  
+        function drawTable() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Type');
+          data.addColumn('number', 'Project');
+          data.addColumn('boolean', 'Running');
+          data.addRows([
+            ['Global',  {v: 10000, f: 'Emms with AI'}, true],
+            ['Global',   {v:8000,   f: 'Angular HOLO Virtual site'},  false],
+            ['Global', {v: 12500, f: 'Ios-Application with finger Sensor'}, true],
+            ['Local',   {v: 7000,  f: 'Official Website Instagram'},  true]
+          ]);
+  
+          var table = new google.visualization.Table(document.getElementById('table_div'));
+  
+          table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+        }
+      </script>
+  </head>
+  <body>
+    <div class="w3-bar w3-wide  w3-card" style="background-color: #006699;color: #fff;padding: 6px;">
+        <a href="project.html" class="w3-bar-item w3-button">
+          <i class='fas fa-laptop-code' style="color: #fff;"></i></i>PROJECTS</a>
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+         
+          <a href="Project_evalution.html" class="w3-bar-item w3-button"><i class="fa fa-check-square-o" aria-hidden="true" style="font-size: 18px;"></i></a>
+          <a href="https://docs.google.com/spreadsheets/d/19ow5BJ5Pko5OEAD2rB6YMVddhNlj-zG-sAaZqhAQfbE/edit?usp=sharing" class="w3-bar-item w3-button"><i class="fa fa-hourglass" aria-hidden="true" style="font-size:18px"></i></a>
+          <a href="send_mail.html" class="w3-bar-item w3-button"><i class="fa fa-paper-plane" aria-hidden="true" style="font-size: 18px;"></i></a>
+          <a href="proj_notification.html" class="w3-bar-item w3-button"><i class="fa fa-bell" aria-hidden="true" style="font-size: 18px;"></i></a>
+          <a href="add_member.html" class="w3-bar-item w3-button"><i class="fa fa-user-plus" aria-hidden="true" style="font-size: 18px;"></i></a>
+          <a href="new_project.html" class="w3-bar-item w3-button"><i class="fa fa-plus" aria-hidden="true" style="font-size: 18px;"></i></a>
+          <a href="log_emms1.html" class="w3-bar-item w3-button"><i class="fa fa-sign-out" aria-hidden="true" style="font-size: 18px;"></i></a>
+        
+        </div>
+      </div>
+      <div class="main" style="height: 100%;width: 100%;">
+    <div id="table_div" style="width: 900px; height: 300px;margin-left: 180px;margin-top:50px"></div><br>
+    <div id="chart_div" style="width: 616px; height: 400px;float: left;margin-left: 20px;"></div>
+    <div id="curve_chart" style="width: 600px; height: 400px;float: left;margin-left: 20px;"></div></div>
+   
+  </body>
+</html>

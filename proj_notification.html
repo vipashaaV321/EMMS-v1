@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<!-- <script src='https://kit.fontawesome.com/a076d05399.js'></script> -->
+<style>
+  body{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#dceff8;
+  }
+* {box-sizing: border-box;}
+  
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 12px;
+  margin-left: 20px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color:#FFFAFA;
+}
+
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.closebtn {
+  padding-left: 10px;
+  color: #888;
+  font-weight: bold;
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.closebtn:hover {
+  color: #000;
+}
+.left{
+  width:30%;
+  height:500px;
+  /* background-color: #fff; */
+  float: left;
+}
+.right{
+  width: 70%;
+  height: 500px;
+  /* background-color: aliceblue; */
+  float: left;
+}
+</style>
+</head>
+<body>
+    <div class="w3-bar w3-wide  w3-card" style="background-color: #006699;color: #fff;padding: 6px;">
+        <a href="project.html" class="w3-bar-item w3-button">
+          <i class='fa fa-bell' style="color: #fff;"></i></i>REPORT_NOTIFICATIONS</a>
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+         
+          <a href="Project_evalution.html" class="w3-bar-item w3-button"><i class="fa fa-check-square-o" aria-hidden="true" style="font-size: 18px;"></i></a>
+          <a href="https://docs.google.com/spreadsheets/d/19ow5BJ5Pko5OEAD2rB6YMVddhNlj-zG-sAaZqhAQfbE/edit?usp=sharing" class="w3-bar-item w3-button"><i class="fa fa-hourglass" aria-hidden="true" style="font-size:18px"></i></a>
+          <a href="send_mail.html" class="w3-bar-item w3-button"><i class="fa fa-paper-plane" aria-hidden="true" style="font-size: 18px;"></i></a>
+          <a href="project.html" class="w3-bar-item w3-button"><i class="fa fa-laptop" aria-hidden="true" style="font-size: 18px;"></i></a>
+          <a href="add_member.html" class="w3-bar-item w3-button"><i class="fa fa-user-plus" aria-hidden="true" style="font-size: 18px;"></i></a>
+          <a href="new_project.html" class="w3-bar-item w3-button"><i class="fa fa-plus" aria-hidden="true" style="font-size: 18px;"></i></a>
+          <a href="log_emms1.html" class="w3-bar-item w3-button"><i class="fa fa-sign-out" aria-hidden="true" style="font-size: 18px;"></i></a>
+        
+        </div>
+      </div>
+<!-- <p>Click on the "x" symbol to delete the contact.</p> -->
+<br>
+<br>
+<div class="left">
+<div class="chip">
+  <img src="team1.jpg" alt="Person" width="96" height="96">
+  TEAMID:01 , REPORT SUBMITTED
+  <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+</div><br><br>
+
+<div class="chip">
+  <img src="2.jpg" alt="Person" width="96" height="96">
+  TEAMID:02 , REPORT SUBMITTED
+  <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+</div>
+<br><br>
+<div class="chip">
+  <img src="3.jpg" alt="Person" width="96" height="96">
+  TEAMID:03 , REPORT SUBMITTED
+  <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+</div><br><br>
+
+<div class="chip">
+  <img src="4.jpg" alt="Person" width="96" height="96">
+  TEAMID:04 , REPORT SUBMITTED
+  <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+</div><br><br>
+<div class="chip" style="background-color:rgba(245, 104, 86, 0.959);opacity: 0.8;">
+  <img src="team5.jpg" alt="Person" width="96" height="96" >
+  TEAMID:05::REPORT ISN'T SUBMITTED
+  <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+</div><br><br>
+</div>
+<div class="right">
+  <div class="w3-container w3-content">
+    <p class="w3-opacity"><b>Today</b></p> 
+    <div class="w3-panel w3-white w3-card w3-display-container" id="t1">
+       <span class="w3-display-topright w3-padding w3-hover-red" onclick="off1()"">X</span>
+      <p class="w3-text-blue"><b>TEAM_04</b></p>
+      <p>PID:04</p>
+      <p class="w3-text-blue"><a href="https://docs.google.com/document/d/e/2PACX-1vSESpDySxFnn4-fq0B1YX6vNGdcE-5-8C1rnXhMTrkUP4x5dn58s-T1_eNKqR9_zoHmzlAcgUKM2Q5C/pub">REPORT</a></p>
+    </div>
+    <div class="w3-panel w3-white w3-card w3-display-container" id="t2">
+      <span class="w3-display-topright w3-padding w3-hover-red" onclick="off2()"">X</span>
+     <p class="w3-text-blue"><b>TEAM_03</b></p>
+     <p>PID:03</p>
+     <p class="w3-text-blue"><a href="https://docs.google.com/document/d/e/2PACX-1vSESpDySxFnn4-fq0B1YX6vNGdcE-5-8C1rnXhMTrkUP4x5dn58s-T1_eNKqR9_zoHmzlAcgUKM2Q5C/pub">REPORT</a></p>
+   </div>
+    
+    <p class="w3-opacity"><b>Yesterday</b></p>
+    <div class="w3-panel w3-white w3-card w3-display-container" id="y1">
+      <span class="w3-display-topright w3-padding w3-hover-red" onclick="off()">X</span>
+      <p class="w3-text-blue"><b>TEAM_02</b></p>
+      <p>PID:02</p>
+      <p class="w3-text-blue"><a href="https://docs.google.com/document/d/e/2PACX-1vSESpDySxFnn4-fq0B1YX6vNGdcE-5-8C1rnXhMTrkUP4x5dn58s-T1_eNKqR9_zoHmzlAcgUKM2Q5C/pub">REPORT</a></p>
+    </div>
+    
+    <div class="w3-panel w3-white w3-card w3-display-container" id="y2">
+      <span class="w3-display-topright w3-padding w3-hover-red" onclick="off3()"">X</span>
+      <p class="w3-text-blue"><b>TEAM_01</b></p>
+      <p>PID:01</p>
+      <p class="w3-text-blue"><a href="https://docs.google.com/document/d/e/2PACX-1vSESpDySxFnn4-fq0B1YX6vNGdcE-5-8C1rnXhMTrkUP4x5dn58s-T1_eNKqR9_zoHmzlAcgUKM2Q5C/pub">REPORT</a></p>
+    </div>
+   </div>
+   
+   </div>
+</div>
+<script>
+  function off(){
+    document.getElementById('y1').style.display='none';
+  }
+  function off1(){
+    document.getElementById('t1').style.display='none';
+  }
+  function off2(){
+    document.getElementById('t2').style.display='none';
+  }
+  function off3(){
+    document.getElementById('y2').style.display='none';
+  }
+</script>
+</body>
+</html>

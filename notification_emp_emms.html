@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    position: relative;
+  }
+  .affix {
+    top: 20px;
+    z-index: 9999 !important;
+  }
+  div.col-sm-9 div {
+    height: 250px;
+    font-size: 18px;
+  }
+  #section1 {color: #333; background-color: rgb(239, 247, 253);box-shadow: 5px 5px 5px #ccc;width:900px;height:150px;margin: 20px;padding-top: 10px;}
+  #section2 {color: #333; background-color:rgb(239, 247, 253);box-shadow: 5px 5px 5px #ccc;width:900px;height:150px;margin: 20px;padding-top: 10px;}
+  #section3 {color: #333; background-color:rgb(239, 247, 253);box-shadow: 5px 5px 5px #ccc;width:900px;height:150px;margin: 20px;padding-top: 10px;}
+  #section4{color: #333; background-color:rgb(239, 247, 253);box-shadow: 5px 5px 5px #ccc;width:900px;height:150px;margin: 20px;padding-top: 10px;}
+  #section5{color: #333; background-color:rgb(239, 247, 253);box-shadow: 5px 5px 5px #ccc;width:900px;height:150px;margin: 20px;padding-top: 10px;}
+  #section6{color: #333; background-color: rgb(239, 247, 253);box-shadow: 5px 5px 5px #ccc;width:900px;height:150px;margin: 20px;padding-top: 10px;}
+  #section42 {color:#333; background-color: rgb(239, 247, 253);box-shadow: 5px 5px 5px #ccc;width:900px;height:150px;margin: 20px;padding-top: 10px;}
+  
+  @media screen and (max-width: 810px) {
+    #section1, #section2, #section3, #section41, #section42  {
+      margin-left: 150px;
+    }
+  }
+
+  #c{
+  display: inline-block;
+  padding: 0 30px;
+  height: 50px;
+  width:830px;
+  font-size: 18px;
+  margin-left: 30px;
+  line-height: 50px;
+  border-radius: 5%;
+  background-color:#FFFAFA;
+}
+
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.closebtn {
+  padding-left: 10px;
+  color: #888;
+  font-weight: bold;
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.closebtn:hover {
+  color: #000;
+}
+  </style>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="10">
+
+
+<div class="w3-bar w3-wide  w3-card" style="background-color: #006699;color: #fff;padding: 5px;">
+    <a href="notification_emp_emms.html" class="w3-bar-item w3-button"><i class="fa fa-bell" aria-hidden="true" style="color: #fff;"></i><b>UPDATES  </b>NOTIFIER</a>
+    
+    <div class="w3-right w3-hide-small">
+      <a href="cv.html" class="w3-bar-item w3-button">PROFILE</a>
+     
+      <a href="Emp_proj.html" class="w3-bar-item w3-button">PROJECTS</a>
+      <a href="Attendence.html" class="w3-bar-item w3-button">ATTENDENCE & LEAVES</a>
+      <a href="#contact" class="w3-bar-item w3-button">ACHIVEMENTS</a>
+      <a href="log_emms1.html" class="w3-bar-item w3-button" onclick="confirm('are you logging out')">LOG_OUT</a>
+    
+    </div>
+  </div>
+<div class="container">
+  <div class="row" style="background-color:rgb(244, 246, 247);">
+    <nav class="col-sm-2" id="myScrollspy">
+      <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="80" style="margin-top: 20px;">
+        <li><a href="#section1"><i class="fa fa-bell" aria-hidden="true"></i> Today<span class="badge">12</span></a></li>
+        <li><a href="#section2"><i class="fa fa-bell" aria-hidden="true"></i> Yesterday</a></li>
+        <li><a href="#section3"><i class="fa fa-bell" aria-hidden="true"></i> This week</a></li>
+        <li><a href="#section4"><i class="fa fa-bell" aria-hidden="true" ></i> important</a></li>
+        <li><a href="#section5"><i class="fa fa-bell" aria-hidden="true"></i> Unread</a></li>
+        
+      </ul>
+    </nav>
+    <div class="col-sm-9">
+      <div id="section1">    
+        
+        <div class="chip" id="c">
+            <img src="submit.png" alt="Person" width="96" height="96">
+            Report submission Successfully
+            <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+          </div><br><br>
+          <div class="chip" id="c">
+            <img src="emms.jpg" alt="Person" width="96" height="96">
+            you are Successfully register to emms!
+            <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+          </div>
+      </div>
+      <div id="section2"> 
+        <div class="chip" id="c">
+            <img src="salary.jpg" alt="Person" width="96" height="96">
+            salary notification
+            <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+          </div><br>
+          <br>
+          <div class="chip" id="c">
+            <img src="admin_blank.jpg" alt="Person" style="width:40px;height:40px;margin-top: 5px;">
+            Congratulations! You Are the Winner of 'Employee Of The Month'! 
+            <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+          </div>
+        
+      </div>        
+      <div id="section3">
+        <div class="chip" id="c">
+            <img src="pro_meeting.png" alt="Person" width="96" height="96">
+            Meeting Details
+            <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+          </div><br><br>
+          <div class="chip" id="c">
+            <img src="gmail.png" alt="Person" width="96" height="96">
+            Mail from project department
+            <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+          </div>
+        
+      </div>
+      <div id="section4"> 
+        <div class="chip" id="c">
+            
+                <img src="img_avatar4.png" alt="Person" width="96" height="96">
+                msg from miss.Abc
+                <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+              </div><br><br>
+              <div class="chip" id="c">
+                <img src="leave_approve.png" alt="Person" width="96" height="96">
+                Leave approved
+                <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+              </div>
+            
+          
+        
+      </div>     
+      <div id="section5"> 
+        <div class="chip" id="c">
+            
+                <img src="img_avatar4.png" alt="Person" width="96" height="96">
+                msg from miss.Abc
+                <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+              </div><br><br>
+              <div class="chip" id="c">
+                <img src="leave_approve.png" alt="Person" width="96" height="96">
+                Leave approved
+                <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+              </div>
+            
+      </div>
+              <div id="section6"> 
+                <div class="chip" id="c">
+                    <img src="salary.jpg" alt="Person" width="96" height="96">
+                   Salary Notification
+                    <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+                  </div></div>
+                  <div id="section6"> 
+                    <div class="chip" id="c">
+                        <img src="salary.jpg" alt="Person" width="96" height="96">
+                        salary notification
+                        <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+                      </div></div>
+                  
+      
+    </div>
+  </div>
+</div>
+
+</body>
+<script>
+ 
+</script>
+</html>

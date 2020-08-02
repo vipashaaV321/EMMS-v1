@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+   LEAVE-APPLICATION
+  </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;
+background-color:#fff;}
+* {box-sizing: border-box;}
+.left{
+  height: 720px;
+  width:450px;
+  background-color:#e5f6fd;;
+}
+.open-button {
+  background-color:#006699;
+  /* border-radius: 7%; */
+  box-shadow: 5px 5px 5px #ccc;
+  margin: 50px;
+  color: #fff;
+  padding: 16px 16px;
+  border: none;
+  cursor: pointer;
+   font-size: 15px;
+  width: 300px;
+  height: 70px;
+}
+.open-button:hover {
+  background-color: #9ab1bd;
+  color:#000;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  width: 300px;
+  height: 70px;
+}
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+   right: 10px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  width:650px;
+ 
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 700px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container #ta {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 165px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.btn{
+  text-decoration: none;
+}
+#nm{
+  width:100%;
+  margin-top:10px;
+  margin-bottom:10px;
+  border: none;
+  background-color: #f1f1f1;
+  padding: 5px;
+  height: 45px;
+}
+</style>
+</head>
+<body>
+  <div class="w3-bar w3-wide w3-padding w3-card" style="background-color: #006699;color: #fff;position: fixed;">
+    <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-pencil-square-o"></i><b> EMMS  </b>LEAVE-APPLICATION</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="mrxyz_mainprofile.html" class="w3-bar-item w3-button">PROFILE</a>
+      <a href="Attendence.html" class="w3-bar-item w3-button">ATTENDENCE & LEAVES</a>
+      <a href="log_emms1.html" class="w3-bar-item w3-button" onclick="confirm('Are you sure for logging out')">LOG_OUT</a>
+    
+    </div>
+  </div>
+
+<div class="left">
+
+<button class="open-button" onclick="openForm()" style="margin-left:60px;margin-top: 100px;">LEAVE-APPLICATION</button>
+
+<div class="chat-popup" id="myForm">
+  <form  class="form-container">
+       <input type="text" placeholder="ENTER SUBJECT" name="name" id="nm" required></input><br>
+
+    <input type="text" placeholder="TO:" name="to" id="nm" required></input><br>
+    <input type="datetime" placeholder="DATE:" name="date" id="nm" required></input><br>
+    <input type="textarea" placeholder="TYPE REASON.." name="msg" required style="margin-bottom: 10px;" id="ta"></input>
+    
+    <button type="submit" class="btn" onclick="noti()">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<br>
+<button class="open-button" onclick="openForm()" style="margin-left:60px;margin-top: 50px;">JOB-RESIGNATION-APPLICATION</button>
+
+<div class="chat-popup" id="myForm">
+  <form  class="form-container">
+   <h3>JOB-RESIGNATION-FORM</h3>
+    <input type="text" placeholder="ENTER SUBJECT" name="name" id="nm" required></input><br>
+    <input type="text" placeholder="TO:" name="to" id="nm" required></input><br>
+    <input type="textarea" placeholder="TYPE REASON.." name="msg" required style="margin-bottom: 0;" id="ta"></input>
+    <input type="datetime" placeholder="LEAVE FROM:" name="date" id="nm" required></input><br>
+    <button type="submit" class="btn" onclick="noti()">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<br>
+<button class="open-button" onclick="openForm()" style="margin-left:60px;margin-top: 50px;">PROJECT-DROP-APPLICATION</button>
+<div class="chat-popup" id="myForm">
+  <form  class="form-container">
+    <input type="text" placeholder="ENTER SUBJECT" name="name" id="nm" required></input><br>
+    <input type="text" placeholder="TO:" name="to" id="nm" required></input><br>
+    <input type="textarea" placeholder="TYPE REASON.." name="msg" required style="margin-bottom: 0;" id="ta"></input>
+    <input type="datetime" placeholder="LEAVE FROM:" name="date" id="nm" required></input><br>
+    <button type="submit" class="btn" onclick="noti()">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<br>
+<button class="open-button" onclick="openForm()" style="margin-left:60px;margin-top: 50px;">COMPLAINS</button>
+<div class="chat-popup" id="myForm">
+  <form  class="form-container">
+   <h3>COMPLAINTS</h3>
+    <input type="text" placeholder="ENTER SUBJECT" name="name" id="nm" required></input><br>
+    <input type="text" placeholder="TO:" name="to" id="nm" required></input><br>
+     <input type="textarea" placeholder="TYPE REASON.." name="msg" required style="margin-bottom: 0;" id="ta"></input>
+    <input type="datetime" placeholder="LEAVE FROM:" name="date" id="nm" required></input><br>
+    <button type="submit" class="btn" onclick="noti()">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+</div>
+<script>
+ function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+function noti(){
+  alert("msg send succesfully");
+  
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!doctype html>
+<html class="zc-html">
+
+<head>
+  <meta charset="utf-8">
+  <title>ZingSoft Demo</title>
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <style>
+    .zc-body {
+      background: #fff;
+    }
+
+    .chart--container {
+      height: 100%;
+      width: 100%;
+      min-height: 530px;
+    }
+
+    .zc-ref {
+      display: none;
+    }
+  </style>
+</head>
+​
+
+<body class="zc-body">
+  ​
+  <div id="myChart" class="chart--container">
+    <a href="https://www.zingchart.com/" rel="noopener" class="zc-ref">Powered by ZingChart</a>
+  </div>
+
+  <script>
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"]; // CHART CONFIG
+    // -----------------------------
+    let chartConfig = {
+      theme: 'classic',
+      globals: {
+        fontFamily: 'arial'
+      },
+      backgroundColor: 'none',
+      graphset: [{
+          type: 'pareto',
+          backgroundColor: '#fff',
+          borderColor: '#ddd',
+          borderRadius: '6px',
+          borderStyle: 'solid',
+          borderWidth: '1px',
+          height: '80%',
+          title: {
+            text: 'Print Defect Frequency',
+            backgroundColor: 'none',
+            fontColor: '#444',
+            height: '12%'
+          },
+          options: {
+            linePlot: {
+              valueBox: {
+                visible: false
+              },
+              lineColor: '#77BDD9',
+              lineWidth: '1px',
+              shadow: false
+            },
+            scaleY2: {
+              decimals: 0,
+              format: '%v%',
+              guide: {
+                visible: false
+              },
+              item: {
+                fontColor: '#444'
+              },
+              lineColor: '#3285A6',
+              lineWidth: '1px',
+              tick: {
+                lineColor: '#3285A6',
+                lineWidth: '1px'
+              }
+            }
+          },
+          plotarea: {
+            margin: '80px 50px 50px 50px'
+          },
+          scaleX: {
+            values: ['Bubbles', 'Creases', 'Curl', 'Dropouts', 'Fade', 'Smear', 'Skew', 'Specks'],
+            guide: {
+              visible: false
+            },
+            item: {
+              fontColor: '#444'
+            },
+            lineColor: '#3285A6',
+            lineWidth: '1px',
+            tick: {
+              lineColor: '#3285A6',
+              lineWidth: '1px'
+            }
+          },
+          scaleY: {
+            guide: {
+              lineStyle: 'dotted',
+              lineWidth: '1px'
+            },
+            item: {
+              fontColor: '#444'
+            },
+            lineColor: '#3285A6',
+            lineWidth: '1px',
+            tick: {
+              lineColor: '#3285A6',
+              lineWidth: '1px'
+            }
+          },
+          crosshairX: {
+            plotLabel: {
+              bold: true
+            }
+          },
+          labels: [{
+              text: 'Cumulative<br>Percentage',
+              fontAngle: 0,
+              fontColor: '#444',
+              x: '91%',
+              y: '9%'
+            },
+            {
+              text: 'Number<br>of Defects',
+              fontAngle: 0,
+              fontColor: '#444',
+              x: '1%',
+              y: '9%'
+            }
+          ],
+          tooltip: {
+            visible: false
+          },
+          series: [{
+              type: 'pareto',
+              text: '# of Defects',
+              values: [67, 22, 14, 8, 6, 4, 4, 2],
+              alpha: 0.7,
+              backgroundColor: 'gray',
+              hoverState: {
+                visible: false
+              }
+            },
+            {
+              type: 'line',
+              text: 'Cumulative %',
+              values: [50.45, 75.2, 83.65, 90.5, 94.2, 96.5, 98.6, 99.5],
+              tooltip: {
+                text: '%v%',
+                fontFamily: 'arial',
+                shadowAlpha: 0.3
+              },
+              hoverState: {
+                visible: false
+              },
+              marker: {
+                type: 'diamond',
+                backgroundColor: '#77BDD9',
+                borderColor: '#3285A6',
+                offsetY: '1px',
+                shadow: false,
+                size: '4px'
+              },
+              scales: 'scale-x,scale-y-2'
+            }
+          ]
+        },
+        {
+          type: 'grid',
+          backgroundColor: 'none',
+          width: '100%',
+          x: '2px',
+          y: '81%',
+          options: {
+            colLabels: ['', 'Bubbles', 'Creases', 'Curl', 'Dropouts', 'Fade', 'Skew', 'Smear', 'Specks', 'Total'],
+            style: {
+              '.th': {
+                align: 'center',
+                backgroundColor: '#a8d5e7',
+                border: '1px solid gray',
+                fontColor: '#000000',
+                fontSize: '10px'
+              },
+              '.tr': {
+                padding: '8px',
+                border: '1px solid gray'
+              },
+              '.tr_last': {
+                borderBottom: '1px solid #ccc'
+              },
+              '.td_last': {
+                borderRight: '1px solid #ccc'
+              },
+              '.td_first': {
+                borderLeft: '1px solid #ccc'
+              },
+              '.td': {
+                align: 'center',
+                backgroundColor: '#fff',
+                border: '1px solid gray',
+                fontSize: '10px'
+              },
+              '.td_0': {
+                fontWeight: 'bold'
+              }
+            }
+          },
+          series: [{
+              values: ['Defects', 67, 22, 14, 8, 6, 4, 4, 2, 127]
+            },
+            {
+              values: ['%', '53%', '17%', '11%', '6%', '5%', '3%', '3%', '2%', '100%']
+            }
+          ]
+        }
+      ]
+    };
+
+    // RENDER CHARTS
+    // -----------------------------
+    zingchart.render({
+      id: 'myChart',
+      data: chartConfig
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    #i1{
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 19px;
+      text-align: center;
+      color: #006699;
+    }
+    .chart--container {
+      min-height: 450px;
+      width: 100%;
+      height: 200px;
+    }
+
+    .zc-ref {
+      display: none;
+    }
+    </style>
+  
+   
+    <body class="w3-light-grey">
+    
+    <!-- Top container -->
+    <div class="w3-bar w3-top" style="z-index:3;background-color: #006699">
+      <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+      <span class="w3-bar-item w3-right" style="color: #fff">Admin Dashboard</span>
+    </div>
+    
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:296px;" id="mySidebar"><br>
+      <div class="w3-container w3-row">
+        <div class="w3-col s4">
+        
+          <img src="hr1.jpg" class="w3-circle w3-margin-right" style="width:60px;">
+        </div>
+        <div class="w3-col s8 w3-bar">
+          <br>
+          <span style="font-size: 17px;"><strong>   Mr.Admin</strong></span><br>
+          <span style="font-size: 13px;"><strong>  <i class="fa fa-user-secret"></i>  Boss</strong></span><br>
+        <!--   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a> -->
+          <br>
+        </div>
+      </div>
+      
+      <div class="w3-container">
+       
+              
+              
+              
+        <i class="fa fa-facebook-official w3-hover-opacity" id="i1"></i>
+        <i class="fa fa-instagram w3-hover-opacity" id="i1"></i>
+       <i class="fa fa-snapchat w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-twitter w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-linkedin w3-hover-opacity" id="i1"></i>
+                 
+               
+              
+              </div>
+      </div>
+      <hr>
+      <div class="w3-bar-block">
+        <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+        <a href="dashb.html" class="w3-bar-item w3-button w3-padding" style="background-color:#006699;color: #fff"><i class="fa fa-user fa-fw"></i>Dashboard</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-book fa-fw"></i> Personal Details</a>
+        <a href="Achievements.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-users fa-fw"></i> Manage Employees Data</a>
+        <a href="Attendance1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card fa-fw"></i>  Attendence & Leaves </a>
+        <!-- <div class="w3-dropdown-hover">
+        
+          <div class="w3-dropdown-content w3-bar-block w3-border">
+            <a href="Dash_proj.html" class="w3-bar-item w3-button">Project Dashboard</a>
+            <a href="Deadline.html" class="w3-bar-item w3-button" style="background-color:#006699;color: #fff">DeadLine Notifier</a>
+            <a href="#" class="w3-bar-item w3-button">Project Report Submission</a>
+          </div> -->
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-laptop fa-fw"></i>  Projects</a>
+        <!-- <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction()" ><i class="fa fa-laptop fa-fw"></i>Projects</div>
+            <div id="Demo9" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Project.html" class="w3-bar-item w3-button">Your Project Details</a>
+              <a href="Dash_proj.html" class="w3-bar-item w3-button">Ongoing Project Dashboard</a>
+              <a href="Deadline.html" class="w3-bar-item w3-button">Deadline Notifier</a>
+              <a href="report_pro.html" class="w3-bar-item w3-button">Project Report Submission</a>
+            </div>
+          </div> -->
+          <a href="" class="w3-bar-item w3-button w3-padding"><i class="fa fa-male fa-fw"></i>HR Department</a>
+          <!-- <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction1()"><i class="fa fa-male fa-fw"></i>  HR</div>
+            <div id="Demo10" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Project.html" class="w3-bar-item w3-button">HR Dashboard</a>
+              <a href="Dash_proj.html" class="w3-bar-item w3-button">Recruitment</a>
+              <a href="Deadline.html" class="w3-bar-item w3-button">Interview</a>
+              <a href="report_pro.html" class="w3-bar-item w3-button">Training</a>
+            </div>
+          </div> -->
+ 
+        <a href="Notification.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-bell fa-fw" ></i>  Notifications</a>
+        <a href="daily.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-pencil fa-fw"></i>  Daily Details & Report </a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-inr fa-fw"></i>  Accounting Department</a> 
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Logout</a>
+        <br><br><br>
+       
+    </nav>
+    
+    
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+        <div class="w3-container w3-margin w3-white w3-padding">
+          <h4 style="text-align: center;">Recuritment Analysis Females & Males (2019-20)</h4>
+            <div id="chartDivi" style="max-width: 740px;height: 250px;margin: 0px auto"></div>
+        </div>
+       
+       
+
+   
+
+<div class="w3-container w3-white w3-margin">
+  <h4 style="text-align: center;">Females/Males Working Ratio</h4><br>
+  <div id="chartDiv12" style="max-width: 700px;height: 300px;margin: 0px auto"></div>
+</div> 
+<div class="w3-container  w3-white w3-margin">
+  <br>
+  <div id="myChart" class="chart--container"></div>
+ 
+</div>
+  </div>
+  
+ 
+  
+ 
+<script>
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
+    
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+    
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+      } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+      }
+    }
+    
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+    }
+    </script>
+     <script>
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"]; // CHART CONFIG
+    // -----------------------------
+    let chartConfig = {
+      theme: 'classic',
+      graphset: [{
+          backgroundColor: 'white',
+          height: '10%',
+          title: {
+            text: 'Employees Ratio',
+            backgroundColor: 'white',
+            color: '#05669D',
+            fontFamily: 'Helvetica',
+            fontSize: '20px',
+            fontWeight: 'bold',
+            offsetX: '45px',
+            offsetY: '-6px',
+            textAlign: 'left'
+          },
+          subtitle: {
+            text: '<span style=\'font-weight:none;\'>Total Employees:</span> <span style=\'font-size:30;font-weight:bold;\'>5,00,000</span>',
+            color: '#05669D',
+            fontFamily: 'Helvetica',
+            fontWeight: 'none',
+            offsetX: '-185px',
+            offsetY: '-6px',
+            textAlign: 'right'
+          },
+          labels: [{
+              text: 'Male',
+              color: 'white',
+              fontFamily: 'Helvetica',
+              fontSize: '52px',
+              fontWeight: 'bold',
+              x: '20%',
+              y: '130px'
+            },
+            {
+              text: 'Female',
+              color: 'white',
+              fontFamily: 'Helvetica',
+              fontSize: '52px',
+              fontWeight: 'bold',
+              x: '60%',
+              y: '130px'
+            }
+          ]
+        },
+        {
+          type: 'pop-pyramid',
+          backgroundColor: 'white',
+          height: '90%',
+          y: '10%',
+          legend: {
+            visible: false
+          },
+          options: {
+            aspect: 'varea',
+            labelPlacement: 'side',
+            side2: {
+              plotarea: {
+                backgroundColor: '#D156BF'
+              },
+             
+            }
+          },
+          plot: {
+            stacked: true
+          },
+          plotarea: {
+            marginTop: '10px',
+            backgroundColor: '#05669D'
+          },
+          scaleX: {
+            values: ['', '0-4', '5-14', '15-24', '25-49', '50+', '60+', '65+', '70+', '75+', '80+', '85+', '90+', ''],
+            guide: {
+              alpha: 0.5,
+              lineColor: 'white',
+              lineStyle: 'solid',
+              lineWidth: '2px'
+            },
+            item: {
+              color: 'white',
+              fontSize: '9px',
+              offsetX: '38px',
+              offsetY: '-8px',
+              textAlign: 'middle'
+            },
+            itemsOverlap: true,
+            tick: {
+              visible: false
+            }
+          },
+          scaleY: {
+            values: '0:10:2.5',
+            format: '%v%',
+            guide: {
+              visible: false
+            },
+            item: {
+              color: 'white',
+              fontSize: '9px',
+              offsetY: '-20px',
+              rules: [{
+                  rule: '%i == 4',
+                  visible: false
+                },
+                {
+                  rule: '%i == 0',
+                  visible: false
+                }
+              ]
+            },
+            lineColor: 'black',
+            lineWidth: '1px',
+            short: true,
+            tick: {
+              alpha: 0.5,
+              lineColor: 'white',
+              offsetY: '-10px'
+            }
+          },
+          tooltip: {
+            text: '%v%',
+            backgroundColor: 'white',
+            borderColor: '#05669D',
+            borderRadius: '3px',
+            borderWidth: '1px',
+            color: '#05669D',
+            shadow: false
+          },
+          series: [{
+              values: [null, 8.4, 16.5, 15.8, 34.1, 25.3, 14.7, 10.2, 6.6, 3.7, 1.8, 0.6, 0.1, null],
+              alphaArea: 0.8,
+              backgroundColor: 'white',
+              dataSide: 1,
+              lineColor: 'white',
+              lineWidth: '1px',
+              marker: {
+                visible: false
+              }
+            },
+            {
+              values: [null, 8.0, 15.8, 15.2, 33.3, 27.8, 17.1, 12.5, 8.5, 5.2, 2.8, 1.1, 0.3, null],
+              alphaArea: 0.8,
+              backgroundColor: 'white',
+              dataSide: 2,
+              lineColor: 'white',
+              lineWidth: '1px',
+              marker: {
+                visible: false
+              }
+            }
+          ]
+        }
+      ]
+    };
+
+    // RENDER CHARTS
+    // -----------------------------
+    zingchart.render({
+      id: 'myChart',
+      data: chartConfig
+    });
+  </script>
+  
+       <script src="https://code.jscharting.com/latest/jscharting.js"></script>
+       <script type="text/javascript" src="https://code.jscharting.com/latest/modules/types.js"></script>
+       <script type="text/javascript">/*
+Circular axis lines with smartPalette fills.
+Learn how to:
+
+- Use smartPalette to fill on axis lines.
+*/
+// JS
+var chart = JSC.chart('chartDivi',{
+debug: true,
+legend_visible: false,
+defaultTooltip_enabled: false,
+xAxis_spacingPercentage: 0.4,
+yAxis: [
+{
+ id: 'ax1',
+ defaultTick: {  padding: 10,  enabled: false},
+ customTicks: [  35,  60,  70,  80,  85],
+ line: {
+   width: 10,
+   
+/*Defining the option will enable it.*/
+   breaks: {},
+   
+/*Palette is defined at series level with an ID referenced here.*/
+   color: 'smartPalette:pal1'
+ },
+ scale_range: [  0,  100]
+},
+{
+ id: 'ax2',
+ scale_range: [  0,  850],
+ defaultTick: {  padding: 10,  enabled: false},
+ customTicks: [  0,  300,  600,  700,  800,  850],
+ line: {  width: 10,  color: 'smartPalette:pal2'}
+}
+],
+defaultSeries: {
+type: 'gauge column roundcaps',
+shape: {
+ label: {
+   text: '%value',
+   align: 'center',
+   verticalAlign: 'middle'
+ }
+}
+},
+series: [
+{
+ type: 'column roundcaps',
+ name: 'Temperatures',
+ yAxis: 'ax1',
+ palette: {
+   id: 'pal1',
+   pointValue: '%yValue',
+   ranges: [
+     {value: 10,color: '#FF5353' },
+     {value: 20,color: '#FFD221' },
+     {value: 30,color: '#77E6B4' },
+     {value: [  40,  50],color: '#21D683' }
+   ]
+ },
+ shape_label: {  style: { fontSize: 28  }},
+ points: [  [ 'x', [10,100 ]  ]]
+},
+{
+ yAxis: 'ax2',
+ name: 'Temperatures',
+ palette: {
+   id: 'pal2',
+   pointValue: '{%yValue/100}',
+   colors: [
+     '#ffffd9',
+     '#edf8b0',
+     '#c7e9b4',
+     '#7fcdbb',
+     '#41b6c3',
+     '#1d91c0',
+     '#225ea8',
+     '#253494',
+     '#081d58'
+   ]
+ },
+ shape_label: {  text: '%value',  style: { fontSize: 28  }},
+ points: [  [ 'x', 290 ]]
+}
+]
+});</script>
+
+
+
+
+<script>
+  var chart = JSC.chart('chartDiv12', {
+     debug: true,
+     defaultSeries: {
+       type: 'pie donut',
+       palette: 'default',
+       pointSelection: true,
+       explodeOffset: 10
+     },
+     series: [
+       {
+         
+   /*Labels*/
+         defaultPoint: {
+           label: {
+             visible: true,
+             placement: 'outside',
+             line: {color: '#cbcac9',width: 2 }
+           }
+         },
+         
+   /*Positions*/
+         shape: {
+           center: '25%,45%',
+           size: '40%',
+           innerSize: '20%',
+           offset: '5%,5%'
+         },
+         name: 'Females',
+         points: [
+           [ 'Managing (f)', 15  ],
+           [ 'R&D(f)', 29  ],
+           [ 'Accounting(f)', 11  ],
+           [ 'HR(f)', 15 ]
+         ]
+       },
+       {
+         name: 'Males',
+         points: [
+           [ 'Managing(m)', 100  ],
+           [ 'R&D(m)', 80  ],
+           [ 'Accounting(m)', 20  ],
+           [ 'HR(m)', 50  ]
+         ]
+       }
+     ],
+     yAxis_label_text: 'NO Of Employee',
+     title_label_text: 'Count of Employees Department wise(Male/Female Ratio)',
+     yAxis_formatString: ''
+   });</script> 
+ </head>
+</body>
+</html>

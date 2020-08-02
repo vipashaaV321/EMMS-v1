@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="table_script.js"></script>
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+}
+
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 230px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  float: left;
+  background-color: #0a4f88;
+  color: #fff;
+  overflow-x: hidden;
+  padding-top: 20px;
+  font-size: 10px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn, .dropdown-btn1{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #fff;
+  display: block;
+  border: none;
+ 
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #000;
+}
+
+/* Main content */
+.main {
+/*  margin-left: 200px;*/ /* Same as the width of the sidenav */
+  
+  padding: 0px 10px;
+  float: left;
+    height: 100%;
+    margin-left: 250px;
+    width:1000px;
+  
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color:#0a4f88;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color:#0a4f88;
+  color: #000;
+  padding-left: 8px;
+
+}
+.dropdown-container1{
+  display: none;
+  background-color: #0a4f88;
+  color: #000;
+  padding-left: 8px;
+}
+* {
+            box-sizing: border-box;
+            flex-wrap: wrap;
+        }
+        
+        body {
+           
+            font-family: Arial, Helvetica, sans-serif;
+        }
+	table{
+		border-collapse:collapse;
+        margin-top: 100px;
+		border-bottom: 1px solid #ccc;
+	}
+	input[type=button] {
+    color:#fff;
+    background-color: navy;
+   margin: 5px;
+   padding: 7px;
+   width:50px;
+   border:none;
+    /* ... other rules ... */
+    cursor:pointer;
+}
+
+input[type=button]:hover {
+    background-color:rgba(255,204,0,0.8);
+}
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  
+  <button class="dropdown-btn">MANAGE EMPLOYEES
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="ADMIN.html">Add Employee</a>
+    <a href="BIOMETRICS.html">Attendance Details</a>
+    <a href="#">Employees' Details</a>
+     <a href="CRUD.html">Add/Update/Delete Details</a>
+      <a href="#">Daily Details</a>
+  </div>
+  <br>
+  <button class="dropdown-btn1">HR MANAGEMENT
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container1">
+    <a href="#">Training Details</a>
+    <a href="#">Recruitment Details</a>
+    <a href="#">Client Management</a>
+  </div><br>
+  <button class="dropdown-btn">PROJECT MANAGEMENT
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Evalution</a>
+    <a href="#">Project Registration</a>
+    <a href="#">Meeting Details</a>
+    <a href="#">Project Details</a>
+  </div><br>
+  <button class="dropdown-btn">ACCOUNTS 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Acconts Details</a>
+    <a href="#">Salary Management</a>
+   
+  </div><br>
+  <a href="logemms">NOTIFICATIONS</a><br>
+  <a href="logemms">LOG_OUT</a>
+</div>
+
+<div class="main">
+    <div id="wrapper">
+        <table align='center' cellspacing=2 cellpadding=5 id="data_table" border=1>
+        <tr>
+        <th>NAME</th>
+        <th>EID</th>
+        <th>DEPARTMENT</th>
+        
+        <th>Action</th>
+        </tr>
+        
+        <tr id="row1">
+        <td id="name_row1">VIPASHA</td>
+        <td id="country_row1">32176</td>
+        <td id="age_row1">WEB-DEV</td>
+        <td>
+        <input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
+        <input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
+        <input type="button" value="Delete" class="delete" onclick="delete_row('1')">
+        </td>
+        </tr>
+        
+        <tr id="row2">
+        <td id="name_row2">CHARMI</td>
+        <td id="country_row2">3217</td>
+        <td id="age_row2">WEB-DEV</td>
+        <td>
+        <input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
+        <input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')">
+        <input type="button" value="Delete" class="delete" onclick="delete_row('2')">
+        </td>
+        </tr>
+        
+        <tr id="row3">
+        <td id="name_row3">SAAKSHI</td>
+        <td id="country_row3">321</td>
+        <td id="age_row3">WEB-DEV</td>
+        <td>
+        <input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
+        <input type="button" id="save_button3" value="Save" class="save" onclick="save_row('3')">
+        <input type="button" value="Delete" class="delete" onclick="delete_row('3')">
+        </td>
+        </tr>
+        
+        <tr>
+        <td><input type="text" id="new_name"></td>
+        <td><input type="text" id="new_country"></td>
+        <td><input type="text" id="new_age"></td>
+        <td><input type="button" class="add" onclick="add_row();" value="Add Row" style="width: 100px"></td>
+        </tr>
+        
+        </table>
+        </div>
+</div>
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn1");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+</body>
+</html> 
+
+
+

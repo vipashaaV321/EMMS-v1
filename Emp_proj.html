@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Project Details</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['timeline']});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var container = document.getElementById('timeline');
+    var chart = new google.visualization.Timeline(container);
+    var dataTable = new google.visualization.DataTable();
+
+    dataTable.addColumn({ type: 'string', id: 'Project' });
+    dataTable.addColumn({ type: 'date', id: 'Start_date' });
+    dataTable.addColumn({ type: 'date', id: 'End_date' });
+    dataTable.addRows([
+      [ 'P_ID:01', new Date(2020, 1, 1), new Date(2020, 2, 2) ],
+      [ 'P_ID:333',      new Date(2020, 1, 15),  new Date(2020, 12, 11) ],
+      [ 'P_ID:#22',      new Date(2020, 2, 2),  new Date(2020, 12, 10) ],
+     
+      [ 'p_ID:1109',  new Date(2019, 12, 10),  new Date(2020, 3, 3) ]]);
+
+    chart.draw(dataTable);
+  }
+</script>
+
+<style>
+  body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  .column {
+  float: left;
+  width: 25%;
+  padding: 0 5px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(250, 250, 250);
+}
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  margin-top: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color:#006699;
+  color: white;
+}
+
+.fa {font-size:50px;}
+  p {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 0px;
+}
+h1{ 
+  color: rgb(228, 43, 43); 
+  font-weight: 100; 
+  font-size: 18px; 
+  margin: 20px 0px 10px; 
+} 
+ #clockdiv{ 
+    font-family: sans-serif; 
+    color: #fff; 
+    display: inline-block; 
+    font-weight: 100; 
+    text-align: center; 
+    font-size: 14px; 
+    margin-left: 340px;
+} 
+#clockdiv > div{ 
+    padding: 8px; 
+    border-radius: 3px; 
+    background: rgb(243, 147, 147); 
+    display: inline-block; 
+} 
+#clockdiv div > span{ 
+    padding: 10px; 
+    border-radius: 3px; 
+    background:rgb(236, 86, 86); 
+    display: inline-block; 
+} 
+smalltext{ 
+    padding-top: 5px; 
+    font-size: 16px; 
+} 
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;
+margin: 0;}
+.table{
+                height: 500px;
+                width: 500px;
+               
+               margin-top: 19px;
+              
+               padding: 27px;
+              
+               font-size: 13px;
+                }
+                #b1{
+                    padding: 10px;
+                    height:40px;
+                    width:120px;
+                    color: #fff;
+                    background-color: #006699;
+                    border: none;
+                    margin-left: 0px;
+                    font-size: 15px;
+                  
+                    border-radius: 7%;
+                    margin-top: 5px;
+                }
+                #m{
+                    height:36px;
+                    border-radius: 4%;
+                    border: 1px solid #333;
+                    padding: 5px;
+                    margin-left: 53px;
+                }
+/* Style the tab */
+input[type="file"]{
+                  background-color: #006699;
+                  color: #fff;
+                  padding: 10px;
+                  
+                }
+.tab {
+  float: left;
+  /* border: 1px solid #ccc; */
+  background-color:aliceblue;
+  width: 25%;
+  height: 600px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  /* margin-top:20px; */
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color:rgb(149, 203, 250);
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color:rgb(149, 203, 250);
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  /* border: 1px solid #ccc; */
+  width: 75%;
+  border-left: none;
+  height: 600px;
+  background-color:rgb(253, 252, 252);
+}
+</style>
+</head>
+<body>
+<div class="w3-bar w3-wide  w3-card" style="background-color: #006699;color: #fff;padding: 5px;">
+    <a href="#" class="w3-bar-item w3-button"><i class="fa fa-laptop" aria-hidden="true" style="color: #fff;font-size: 18px;"></i>PROJECTS</a>
+    <div class="w3-right w3-hide-small">
+      <a href="mrxyz_mainprofile.html" class="w3-bar-item w3-button">PROFILE</a>
+      <a href="Attendence.html" class="w3-bar-item w3-button">ATTENDENCE & LEAVES</a>
+      <a href="Achievement.html.html" class="w3-bar-item w3-button">ACHIVEMENTS</a>
+      <a href="log_emms1.html" class="w3-bar-item w3-button" onclick="confirm('are you logging out')">LOG_OUT</a>
+    
+    </div>
+  </div>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'p2')">DASH BOARD</button>
+  <button class="tablinks" onclick="openCity(event, 'project')" id="defaultOpen">Project Details</button>
+  <button class="tablinks" onclick="openCity(event, 'deadlines')">deadlines notifier</button>
+  <button class="tablinks" onclick="openCity(event, 'p1')">Report Submission</button>
+ <a href="timeline.html"><button>Your Weekly Report</button></a>
+</div>
+
+<div id="project" class="tabcontent">
+  <h3>Project's Details </h3>
+  <br>
+  <div id="timeline" style="height: 300px;width: 100%";></div>
+  <div id="series_chart_div" style="width: 100%; height: 300px;"></div>
+ 
+</div>
+<div id="p2" class="tabcontent">
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <p><i class="fa fa-user"></i></p>
+        <h3>11+</h3>
+        <p>Partners</p>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card">
+        <p><i class="fa fa-check"></i></p>
+        <h3>22+</h3>
+        <p>Projects</p>
+      </div>
+    </div>
+    
+    <div class="column">
+      <div class="card">
+        <p><i class="fa fa-smile-o"></i></p>
+        <h3>10+</h3>
+        <p>Clients Deal</p>
+      </div>
+    </div>
+    
+    <div class="column">
+      <div class="card">
+        <p><i class="fa fa-coffee"></i></p>
+        <h3>80+</h3>
+        <p>Meetings</p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <h3 style="text-align: center;">ONGOING PROJECTS DETAILS</h3>
+  <br><br>
+  <table>
+    <tr>
+      <th>PROJECT</th>
+      <th>TECHNOLOGY</th>
+      <th>ID</th>
+      <th>TEAMID</th>
+      <th>TEAMLEADER</th>
+      <th>CLIENTS</th>
+      <th>TEAMMEMBERS</th>
+    </tr>
+    <tr>
+      <td>EMPLOYEE MANAGEMENT SYSTEM</td>
+      <td>ANGULAR WEBDEVELOPEMENT</td>
+      <td>01</td>
+      <td>31</td>
+      <td>VIPASHA VAGHELA</td>
+      <td>WEB_INFOTECH pvt.limited</td>
+      <td><ul>
+        <li>charmi Daftari</li>
+        <li>Saakshi Desai</li>
+      </ul></td>
+    </tr>
+    <tr>
+      <td>BANK MANAGEMENT SYSTEM</td>
+      <td>MEAN WEBDEVELOPEMENT</td>
+      <td>02</td>
+      <td>317</td>
+      <td>VIPASHA VAGHELA</td>
+      <td>WEB_world</td>
+      <td><ul>
+        <li>charmi Daftari</li>
+        <li>Saakshi Desai</li>
+      </ul></td>
+    </tr>
+    
+  </table>
+  
+      
+    
+</div>
+<div id="p1" class="tabcontent">
+   <h2 style="text-align: center;"> Submit Your Project Report</h2>
+    <div class="table">
+        <form action="mailto:vipashavaghela321@gmail.com" method="post" enctype="text/plain" style="border: 1px solid #eee;padding: 20px;width:600px;box-shadow: #eee 5px 5px 5px;margin-left: 140px;">
+        <input type="text" name="id" size="60" id="m" placeholder="TEAM_ID"><br><br>
+        <input type="text" name="id & name" size="60" id="m" placeholder="EMP_ID & NAME"><br><br>
+        <input type="text" name="name" size="60" id="m" placeholder="DEPARTMENT"><br><br>  
+         <input type="text" name="PROJECT_NAME" size="60" id="m" placeholder="PROJECT_NAME & PROJECT_ID"><br><br>
+         <input type="file" name="filepreview" value="filepreview" id="filepreview" style="margin-left: 140px;"> <br>
+        <input type="submit" value="SEND_MAIL" id="b1"  style="margin-left: 154px;">
+        <input type="reset" value="RESET" id="b1">
+       
+        </form><br><br>
+  
+        <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQWzqi-RYZzYW4bSxMz1OG_W-ksaGMuGB_fXNMOuuGDdZABgNfHmbxmjFMWT3ci3ra7eKqkk9Yaf6YU/pubhtml?gid=0&single=true"><button id="b" style="color:white;background-color: #006699;padding: 13px;border: none;margin-left: 400px;">Generate Daily Work Progress</button></a>
+        </div>
+</div>
+<div id="deadlines" class="tabcontent">
+  <br>
+  <div class="container">
+    <div class="alert alert-info alert-dismissible fade in" style="width: 80%;">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      
+      <strong>Info!</strong>  <strong>PROJ_01</strong> Submission date:20-10-2020<br>
+      REMAINING TIME: <p id="demo"></p>
+    </div>
+    <div class="alert alert-danger alert-dismissible fade in" style="width: 80%;">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      <strong>Danger!!</strong>  <strong>PROJ_01</strong> You  missed deadline!!!<br>
+      <br><div id="clockdiv"> 
+        <div> 
+          <span class="days" id="day1"></span> 
+          <div class="smalltext">d</div> 
+        </div> 
+        <div> 
+          <span class="hours" id="hour1"></span> 
+          <div class="smalltext">h</div> 
+        </div> 
+        <div> 
+          <span class="minutes" id="minute1"></span> 
+          <div class="smalltext">m</div> 
+        </div> 
+        <div> 
+          <span class="seconds" id="second1"></span> 
+          <div class="smalltext">s</div> 
+        </div> 
+      </div> <p id="demo2"></p> </div>
+      <div class="alert alert-warning alert-dismissible fade in" style="width: 80%;">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Warning!</strong><br>  <strong>PROJ_01</strong> Submission date:28-2-2020<br><br>
+        <strong>A day left only!!!</strong><p id="demo1"></p>
+      </div>
+      <div class="alert alert-success alert-dismissible fade in" style="width: 80%;">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Proj_0101</strong><br>  <strong>A new Project is Assigned to you</strong><br>Details are sent in mail! check it!<br>
+      </div>
+      
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawSeriesChart);
+
+function drawSeriesChart() {
+
+  var data = google.visualization.arrayToDataTable([
+    ['MONTH', 'NO. OF PROJECTS SUBMITTED', 'missed deadlines', 'type',     'done as team leader'],
+    ['JAN_2020',    2,              1,      'Global',  2],
+    ['FEB_2020',    2,              0,      'national',         1],
+    ['OCT_2019',    2,               1,      'national',         0],
+    ['DEC_2019',    3,              1,      'global',    1],
+    ['NOV_2019',    3,              0,         'local',         2]
+  
+  ]);
+
+  var options = {
+    title: 'Project Details about submission,missed deadlines',
+    hAxis: {title: 'Project'},
+    vAxis: {title: 'Analysis'},
+    bubble: {textStyle: {fontSize: 11}}      };
+
+  var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
+  chart.draw(data, options);
+}
+</script> 
+<script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("oct 20, 2020 15:37:25").getTime();
+  
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+  
+    // Get today's date and time
+    var now = new Date().getTime();
+      
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+      
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+      
+    // If the count down is over, write some text 
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+  </script>
+ <script>
+  // Set the date we're counting down to
+  var countDownDate1 = new Date("feb 28, 2020 15:37:25").getTime();
+  
+  // Update the count down every 1 second
+  var y = setInterval(function() {
+  
+    // Get today's date and time
+    var now1 = new Date().getTime();
+      
+    // Find the distance between now and the count down date
+    var distance1 = countDownDate1 - now1;
+      
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance1 / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance1 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance1 % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance1 % (1000 * 60)) / 1000);
+      
+    // Output the result in an element with id="demo"
+    document.getElementById("demo1").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+      
+    // If the count down is over, write some text 
+    if (distance1 < 0) {
+      clearInterval(y);
+      document.getElementById("demo1").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+  </script>
+ <script>
+    var deadline1 = new Date("feb 25, 2020 15:37:25").getTime(); 
+      
+      var y = setInterval(function() { 
+        
+      var now = new Date().getTime(); 
+      var ti = deadline1 - now; 
+      var days = Math.floor(ti / (1000 * 60 * 60 * 24)); 
+      var hours = Math.floor((ti%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+      var minutes = Math.floor((ti % (1000 * 60 * 60)) / (1000 * 60)); 
+      var seconds = Math.floor((ti % (1000 * 60)) / 1000); 
+      document.getElementById("day1").innerHTML =days ; 
+      document.getElementById("hour1").innerHTML =hours; 
+      document.getElementById("minute1").innerHTML = minutes;  
+      document.getElementById("second1").innerHTML =seconds;  
+      if (ti < 0) { 
+              clearInterval(y); 
+              document.getElementById("demo2").innerHTML = "TIME UP"; 
+              document.getElementById("demo2").style.marginTop = '10px'; 
+              document.getElementById("day1").innerHTML ='0'; 
+              document.getElementById("hour1").innerHTML ='0'; 
+              document.getElementById("minute1").innerHTML ='0' ;  
+              document.getElementById("second1").innerHTML = '0'; } 
+      }, 1000); 
+    
+ </script>
+</body>
+</html> 

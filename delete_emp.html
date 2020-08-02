@@ -1,0 +1,69 @@
+<html>
+ <head><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script><link rel='stylesheet' href='https://codepedia.info/wp-content/themes/themevicky/css/editor.css' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ </head>
+ <body  ng-app="myapp" ng-controller="tableController" style="font-family: Arial, Helvetica, sans-serif;">
+    <div class="w3-bar w3-wide  w3-card" style="background-color: #006699;color: #fff;padding: 5px;">
+        <a href="Employee_table.html" class="w3-bar-item w3-button"><i class="fa fa-arrow-left" aria-hidden="true" style="color: #fff;font-size: 18px;"></i></a>
+        <!-- Float links to the right. Hide them on small screens -->
+         <div class="w3-right w3-hide-small">
+         <!-- <a href="https://docs.google.com/spreadsheets/d/1fJjhcKl6Wvn7IUbewuqouiIwaUEuKk_9mLcYnuZU-lE/edit?usp=sharing" class="w3-bar-item w3-button">SCHEDULE</a> -->
+          <!-- <a href="daily_detail.html" class="w3-bar-item w3-button">DAILY_REPORT</a> -->
+          <!-- <a href="Employee_table.html" class="w3-bar-item w3-button">MANAGE DATA</a> -->
+          <a href="log_emms1.html" class="w3-bar-item w3-button" onclick="confirm('are you logging out')">LOG_OUT</a>
+        
+    </div>
+     </div>
+   <table class="table table-stripe"  >
+            <thead><tr>
+                    <th>Name</th>
+                    <th>EID</th>
+                    <th>Gender</th>
+                    <th> City </th>
+                    <th> Department</th>
+                    <th> Action </th>
+                  </tr></thead>
+            <tbody>
+                <tr ng-repeat="emp in employees">
+                    <td> {{ emp.Name }} </td>
+                    <td> {{ emp.EID }} </td>
+                        <td> {{emp.Gender }} </td>
+                    <td>  {{emp.City }}</td>
+                    <td>  {{emp.Department }}</td>
+                    <td>  <button  ng-click="deleteRow($index)" style="background-color: #006699;color: #fff;padding: 10px;border: none;">Delete</button> </td>
+                </tr>
+            </tbody>
+        </table>
+
+<script type="text/javascript">
+
+    var app = angular.module("myapp", []);
+
+    app.controller("tableController", ['$scope', function ($scope) {
+
+        $scope.employees = [{ 'Name': 'Satinder Singh','EID':'3217', 'Gender': 'Male', 'City': 'Bombay','Department':'Webdev' },
+                        { 'Name': 'Leslie Mac','EID':'3217', 'Gender': 'Female', 'City': 'Queensland','Department':'Webdev' },
+                        { 'Name': 'Andrea ely ','EID':'3217', 'Gender': 'Female', 'City': 'Rio' ,'Department':'Webdev'},
+                        { 'Name': 'Amit Sarna','EID':'3217', 'Gender': 'Male', 'City': 'Navi Mumbai','Department':'Webdev' },
+                        { 'Name': 'Amit Sarna','EID':'3217', 'Gender': 'Male', 'City': 'Navi Mumbai' ,'Department':'Webdev'},
+                        { 'Name': 'Amit Sarna','EID':'3217', 'Gender': 'Male', 'City': 'Navi Mumbai' ,'Department':'Webdev'},
+                        { 'Name': 'Amit Sarna','EID':'3217', 'Gender': 'Male', 'City': 'Navi Mumbai','Department':'Webdev' },
+                        { 'Name': 'vipasha','EID':'3217', 'Gender': 'FEMale', 'City': 'Scouthe','Department':'Webdev'}];
+
+        // delete function this remove the selected table row
+        $scope.deleteRow= function (i) {
+                $scope.employees.splice(i, 1);
+            };
+
+    } ]);
+    
+</script>
+ </body>
+</html>

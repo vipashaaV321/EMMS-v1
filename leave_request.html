@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<title>leave_request</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<body>
+  <div class="w3-bar w3-wide  w3-card" style="background-color: #006699;color: #fff;padding: 5px;">
+    <a href="notification_emp_emms.html" class="w3-bar-item w3-button"><i class="fa fa-bell" aria-hidden="true" style="color: #fff;font-size: 18px;"></i></a>
+    
+    <div class="w3-right w3-hide-small">
+      <a href="daily_detail.html" class="w3-bar-item w3-button">DAILY REPORT</a>
+      <a href="Employee_table.html" class="w3-bar-item w3-button">MANAGE DATA</a>
+      <a href="log_emms1.html" class="w3-bar-item w3-button" onclick="confirm('are you logging out')">LOG_OUT</a>
+    
+    </div>
+  </div>
+  <div class="w3-container" style="margin-top: 30px;margin-left: 300px;"> 
+    <div class="w3-card-4" style="width:70%">
+      <header class="w3-container w3-light-grey">
+        <h3>vipasha</h3>
+      </header>
+      <div class="w3-container">
+        <p>1 new leave request</p>
+        <hr>
+       <a href="vipasha_emms.html"> <img src="PicsArt_10-07-08.58.46.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px"></a>
+        <p>leave- 20/2 to 22/2<br>
+        </p><br><br>
+      </div>
+      <button class="w3-button w3-block" style="background-color: #006699;color: #fff;width:50%;float: left;" onclick="acc2()" id="a3">+ ACCEPT</button>
+      <button class="w3-button w3-block" style="background-color: red;color: #fff;width:50%;float: left;" onclick="acc3()" id="a4">- REJECT</button>
+    </div>
+  </div>
+<div class="w3-container" style="margin-top: 40px;margin-left: 300px;">
+ 
+
+  <div class="w3-card-4" style="width:70%">
+    <header class="w3-container w3-light-grey">
+      <h3>Mr. xyz</h3>
+    </header>
+    <div class="w3-container">
+      <p>1 new leave request</p>
+      <hr>
+      <img src="img_avatar3.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+      <p>leave- 20/2 to 20/3</p><br><br>
+    </div>
+    <button class="w3-button w3-block" style="background-color: #006699;color: #fff;width:50%;float: left;" onclick="acc()" id="a1">+ ACCEPT</button>
+    <button class="w3-button w3-block" style="background-color: red;color: #fff;width:50%;float: left;" onclick="acc1()" id="a2">- REJECT</button>
+  </div>
+</div>
+<div class="w3-container" style="margin-top: 30px;margin-left: 300px;">
+ 
+
+  <div class="w3-card-4" style="width:70%">
+    <header class="w3-container w3-light-grey">
+      <h3>Diya Vaghela</h3>
+    </header>
+    <div class="w3-container">
+      <p>1 new job Application</p>
+      <hr>
+     <a href="vipasha_emms.html"> <img src="avatar_hat.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px"></a>
+      <p>Email: dv@gmail.com<br>
+        
+      </p><a href="https://docs.google.com/document/d/e/2PACX-1vQbxgpLtSFkXxe4VceMFsVaI_siLmFzqZeFRfbNQ1awEaBQmaLF9o86j9pLGOkNO_btwA0zoWjtniPL/pub">VIEW CV</a><br><br>
+    </div>
+    <a href="https://docs.google.com/spreadsheets/d/13Da1Y9MmzlHe9h1LX_lgwVcla4WpXchvVpteO9Lw9p0/edit?usp=sharing"><button class="w3-button w3-block" style="background-color: #006699;color: #fff;width:50%;float: left;" onclick="acc5()" id="a5">+ ACCEPT</button></a>
+    <button class="w3-button w3-block" style="background-color: red;color: #fff;width:50%;float: left;" onclick="acc6()" id="a6">- REJECT</button>
+  </div>
+</div>
+<script>
+    function acc(){
+        alert('successfully accepted');
+        document.getElementById('a1').innerHTML="apprroved";
+        document.getElementById('a1').style.backgroundColor='green'; 
+        document.getElementById('a1').style.width='100%'; 
+        document.getElementById('a2').style.display='none'; 
+    }
+    function acc1(){
+        alert('Request rejected');
+        document.getElementById('a2').innerHTML="declined";
+        document.getElementById('a2').style.backgroundColor='red'; 
+        document.getElementById('a2').style.width='100%'; 
+        document.getElementById('a1').style.display='none'; 
+    }
+    function acc2(){
+        alert('successfully accepted');
+        document.getElementById('a3').innerHTML="apprroved";
+        document.getElementById('a3').style.backgroundColor='green'; 
+        document.getElementById('a3').style.width='100%'; 
+        document.getElementById('a4').style.display='none'; 
+    }
+    function acc3(){
+        alert('Request rejected');
+        document.getElementById('a4').innerHTML="declined";
+        document.getElementById('a4').style.backgroundColor='red'; 
+        document.getElementById('a4').style.width='100%'; 
+        document.getElementById('a3').style.display='none'; 
+    }
+    function acc5(){
+        alert('successfully accepted');
+        document.getElementById('a5').innerHTML="apprroved";
+        document.getElementById('a5').style.backgroundColor='green'; 
+        document.getElementById('a5').style.width='100%'; 
+        document.getElementById('a6').style.display='none'; 
+        // var x=confirm('send mail for confirmation?');
+        // if(x==true){
+        //   window.open('https://mail.google.com/mail/u/0/#inbox');
+        // }
+        // else{
+        //   window.open('leave_request.html');
+        // }
+
+        
+    }
+    function acc6(){
+        alert('Request rejected');
+        document.getElementById('a6').innerHTML="declined";
+        document.getElementById('a6').style.backgroundColor='red'; 
+        document.getElementById('a6').style.width='100%'; 
+        
+        document.getElementById('a5').style.display='none'; 
+    }
+</script>
+</body>
+</html>

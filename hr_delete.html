@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style>
+    body{
+        background-color: aliceblue;
+    }
+    button{
+        background-color: #006699;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        width: 100px;
+    }
+    input{
+        padding: 10px;
+    }
+    td{
+        margin:20px;
+    }
+    .box{
+        width:200px;
+        padding:50px;
+        height:200px;
+    }
+    .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 30px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color:rgb(120, 201, 233);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+.container {
+  border-radius: 5px;
+  background-color:#e7f7ff;
+  padding: 20px;
+  /* margin-left: 360px; */
+}
+.openbtn:hover {
+  background-color: #444;
+}
+button a{
+  text-decoration: none;
+  color: #fff;
+}
+#main {
+  transition: margin-left .5s;
+  /* padding: 16px; */
+}
+</style>
+</head>
+<body>
+    <body style="background-color: aliceblue;font-family: Arial, Helvetica, sans-serif;">
+        <div class="w3-bar w3-wide  w3-card" style="background-color: #006699;color: #fff;padding: 5px;">
+            <a href="hr_details.html" class="w3-bar-item w3-button" style="background-color: #006699;"><i class="fa fa-laptop" aria-hidden="true" style="color: #fff;background-color: #006699;"></i>RECRUITMENT</a>
+            <!-- Float links to the right. Hide them on small screens -->
+            
+            <div class="w3-right w3-hide-small" style="background-color: #006699;">
+              <!-- <a href="cal1.html" class="w3-bar-item w3-button"><i class="fa fa-hourglass-start"></i></a> -->
+              <a href="log_emms1.html" class="w3-bar-item w3-button" onclick="confirm('are you logging out')">LOG_OUT</a>
+            
+            </div>
+          </div>
+          <div class="container"><div id="mySidebar" class="sidebar" style="background-color: #96cfeb;">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="Employee_table.html" style="font-size: 18px;">EMP DETAILS</a>
+            <a href="training_emp.html" style="font-size: 18px;">TRAINING PROCESS</a>
+            <a href="HR_register.html" style="font-size: 18px;">ADD EMPLOYEE</a>
+            <a href="client.html" style="font-size: 18px;">Clients management</a>
+            <a href="hr_details.html" style="font-size: 18px;">RECRUITMENT</a>
+          </div>
+          <button class="openbtn" onclick="openNav()" style="background-color: #006699;">☰</button>
+    
+<div ng-app="appTable">
+    
+            <div ng-controller="Allocation">
+
+                <button ng-click="add()" style="margin-left: 500px;"> Add </button> 
+                <button ng-click="remove()">remove</button>
+            <br><br>
+                <table style="border: 1px solid #000;margin-left: 400px;background-color: #fff;">
+                    <th>
+                        <td>EID</td>
+                        <td></td>
+                        <td>Name</td>
+                        <td>DID</td>
+                        <td>DETAILS</td>
+
+                    </th>
+                    <tr ng-repeat="data in dataList">
+                        <td></td>
+                        <td><input type="checkbox" ng-model="data.isDelete" >{{$index}}</td> 
+                        <td></td>
+                        <td> <input type="text" ng-model="data.name"/></td>    
+                        <td><input type="text" ng-model="data.dept"/></td>
+<td><button style="background-color: #006699;
+  color: #fff;
+  padding: 2px;
+  border: none;
+  width: 60px;"><a href="HR_register.html">ADD DETAILS</a></button></td>
+                    </tr>
+                </table>
+            </div>    
+             </div>
+<script>
+    var app = angular.module("appTable",[]);
+    app.controller("Allocation",function($scope) {
+
+        $scope.dataList = [{name:'Vipasha',dept:'WebDev'},{name:'Miss xyz',dept:'webdev'},{name:'Mr xyz',dept:'webdev'}];
+        $scope.add = function(){
+            var data = {};
+           data.name ='' ;
+           data.dept ='';
+           $scope.dataList.push(data);
+
+        };
+        $scope.remove = function(){
+            var newDataList=[];
+            angular.forEach($scope.dataList,function(v){
+            if(!v.isDelete){
+                newDataList.push(v);
+            }
+        });    $scope.dataList=newDataList;
+        };
+
+});
+</script>
+<script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+    </script>
+</body>
+</html>

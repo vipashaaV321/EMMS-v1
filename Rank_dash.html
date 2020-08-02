@@ -1,0 +1,229 @@
+<!doctype html>
+<html class="zc-html">
+
+<head>
+  <meta charset="utf-8">
+  <title>ZingSoft Demo</title>
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <style>
+    .chart--container {
+      height: 100%;
+      width: 100%;
+      min-height: 530px;
+    }
+
+    .zc-ref {
+      display: none;
+    }
+  </style>
+</head>
+​
+
+<body class="zc-body">
+  ​
+  <div id="myChart" class="chart--container">
+    <a href="https://www.zingchart.com/" rel="noopener" class="zc-ref">Powered by ZingChart</a>
+  </div>
+
+  <script>
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"]; // CHART CONFIG
+    // -----------------------------
+    let chartConfig = {
+      graphset: [{
+          type: 'grid',
+          globals: {
+            fontFamily: 'Arial',
+            fontStyle: 'normal',
+            fontWeight: 'normal'
+          },
+          backgroundColor: '#fff',
+          options: {
+            colLabels: [
+              'RESTAURANT',
+              'YELP RATING'
+            ],
+            style: {
+              '.td': {
+                paddingTop: '9px',
+                align: 'center',
+                borderTop: 'none',
+                borderRight: '1px solid #2f3341',
+                borderBottom: '1px solid #2f3341',
+                borderLeft: '1px solid #2f3341',
+                borderWidth: '1px',
+                fontColor: '#d8d9db',
+                fontSize: '11px',
+                height: '34px'
+              },
+              '.th': {
+                align: 'center',
+                backgroundColor: '#006699',
+                borderTop: 'none',
+                borderRight: '1px solid #2f3341',
+                borderBottom: '1px solid #2f3341',
+                borderLeft: '1px solid #2f3341',
+                fontColor: '#fff',
+                fontSize: '14px',
+                fontWeight: 'normal',
+                height: '38px'
+              },
+              '.tr_even': {
+                backgroundColor: '#eee',
+ fontColor: '#000',
+              },
+              '.tr_odd': {
+                backgroundColor: '#ccc'
+              }
+            }
+          },
+          plotarea: {
+            margin: '15px 15px'
+          },
+          series: [{
+              values: [
+                'Café Caterwaul',
+                '5'
+              ]
+            },
+            {
+              values: [
+                'Plutarch',
+                '4.5'
+              ]
+            },
+            {
+              values: [
+                'Eden Parlor',
+                '4.5'
+              ]
+            },
+            {
+              values: [
+                'Naiveté Sushi',
+                '4'
+              ]
+            },
+            {
+              values: [
+                'Flying Chaucer',
+                '3.5'
+              ]
+            }
+          ]
+        },
+        {
+          type: 'wordcloud',
+          backgroundColor: '#2f3341',
+          options: {
+            text: 'I live in the area and finding good food with great ambiance is limited.  When you dont want the standard options of mexican, pizza, sushi or bad thai food give this place a try.  I have been here a total of 4 or 5 times.  I don\'t love everything on the menu.  For example,the Braised Pork Shank, although a popular item as we did order based on staff recommendation, it was too rich for my taste.Here\'s what I LOVED:Top of the list has and will always be the Spanish Braised Octopus.  I want that for my appetizer, my main entree and my dessert.  I prefer to order it with out the pork belly, which they will happily accommodate.  My husband and I dream of this Octopus dish, as it is extremely delicious, tender, and just PERFECT!!!!I liked the flatbreads and the Tuna Tower.  But my heart beats for the for Spanish Braised Octopus.  Yum Yum Yum Yum Yum Yum Yum Yum Yum YumService: A+Drinks: A+ Parking: $3 Cheap and convenient A+ I would like to have that Wall of plants setup in my office area and would like Management to give me tips on where I can get similar or who you guys worked with to get it done. Oh yes... and although I dont have a dog, I think its cool that you can bring a behaved dog.Cheers!This place is pretty awesome for a chill Sunday morning. My group decided to have brunch here, and lets just say we didn\'t plan very well, but they were very accommodating. They were able to take our small brunch group of 6, and as it grew, adjusted accordingly, and made arrangements have a dog, I think its cool that you can bring a behaved dog.Cheers!This place is pretty awesome for a chill Sunday morning. My group decided to have brunch here, and lets just say we didn\'t plan very well, but they were very accommodating. They were able to take our small brunch group of 6, and as it grew, adjusted accordingly, and made arrangements for 12! They really didnt have to do this, but just that alone, 5 stars for service! This place is called the patio, so of course most if not all the seating is outside. I don\'t about everyone, but I personally love eating outdoors. There is a small area that is covered by the bar and umbrellas for the open air dining. They do allow dogs in the dining area, so be aware and courteous. The food was fantastic. I enjoyed a glass of rose with hibiscus flower (what a nice touch) and a cheese board. The cheese board has a variety of meats, cheeses, bread and condiments... I would simply come here just for cheese and wine! Next, we enjoyed mouthwatering braised octopus, as well as crabcake and deconstructed bruschetta. All were very good. I visited a few times, but most recently with a large group of friends on a random Tuesday evening.  First great sign:  the ENTIRE restaurant was packed from 6pm to 9pm, when we departed.  Clearly, this was a dining destination. Second great sign:  The staff was on point!  Nothing perturbs me more at a restaurant where you have to do the awkward craning of your neck to spot where your server went because it\'s been 20 minutes since your water has been empty. Third great sign:  The setting!  Half outdoor, half indoor, still intimate and well appointed.  I love the giant wall of plants on one side.  Its far better than a wall plastered with torn up PB-ish posters or wall art. Fernando, our server, was a dear. I totally appreciated his help when picking out my meal. I let him know I dont eat meat or dairy and would like a flatbread made without either of those and he let me know we can do this for you, but there are other options on the menu that will make a better dish. I thought it was awesome that he cared about what I ordered and didn\'tjust say sure and bring me something subpar. Now let\'s get to the food. I was recently in with a larger group and we decided to share a few small/shared plates. I had a chance to try their  cheese plate, the braised spanish octopus, braised short ribs, brussell sprouts and ahi tuna tower. It was quite the mix of different tastes and flavors, but all too good to pass up. It seems that they have a little bit of everything on the menu and a great selection appetizers, shared plates and large plates. I would definitely recommend The Patio for any date night, girls night or weekend brunch outing.I got the smoked pork belly benedict and the pork belly was so tender and delicious. Tasted like bacon! The bread, spinach everything was really good. The poached eggs were perfect. You know sometimes you get the egg yolk and it\'s just like raw egg yolk? This one was just right, the yolk wasn\'t fully cooked but you can tell it was poached perfectly and melted (but still thick) on your bread and meat. My BF got the steak and eggs, the steak was well seasoned but he said the eggs were a bit on the stingy side and wanted more eggs then meat. I was like, sounds like my type of breakfast, more meat than eggs! I did try the steak and it was good but had a lot of fat on it. It was better seasoned then the steaks at Island Prime for our anniversary...and we paid a lot for that.I got the smoked pke was the biscuit. It was on the dry, crunchy, overly toasted side and I prefer the soft, fluffier biscuits. A softer biscuit would have been easier to cut and would also have soaked up the flavors and egg yolk more. In general though, the benedict was good, and this is coming from someone who usually doesn\'t prefer benedicts.Why the four stars? I am totally coming back here next time to try the non-dessert menu! Place looks awesome, just seems to have a good vibe. The servers are attractive (that never hurts, right?), friendly, and attentive. The thing that really got us was that they gave us the dinner bread even though we only sat down to have dessert. Do I just like free food? Yes (who doesn\'t?), but it\'s that their dinner bread is actually a bit unique. It is some type of multigrain french roll or baguette but they serve it with cheese melted in the middle. I liked this touch. It didn\'t blow my mind but it was a small detail that made me wonder what their dinner menu has to offer.I love this place and their burratta cheese starter plate is amazing. We had the artichoke and pesto burratta and it was to die for. They also give you cheesy bread to start for free which is plenty for an appetizer. Their specials are usually very good. You want to make a reservation because it is pretty small and it can get crowded on weekend nights.  I don\'t even like Italian food but I love love LOVE this place! Our server Amy was incredibly attentive and knowledgeable. Suggested the special; Chilean sea bass with black linguine ( I think it was linguine who cares it was freakin delicious). My main squeeze ordered Gnocci al Pollo, um super yummmmmy! Neither or us were able to finish our entrees because gluttony took over as soon as we laid eyes on the Pesto Burrata. Best dish ever! Did I mention you should come to this place just for the bread oil & vin. I\'ll be having foodie dreams of this place for a while ',
+            colorType: 'palette',
+            ignore: ['in', 'of', 'by', 'an', 'on', 'it', 'to', 'the', 'and', 'from', 'didn', 'more', 'they', 'when', 'recently', 'come', 'which', 'dont', 'is', 'just', 'very', 'this', 'I', 'were', 'still', 'with', 'too', 'would', 'that', 'here', 'have', 'had', 'like', 'been'],
+            maxFontSize: '30px',
+            maxItems: 20,
+            minFontSize: '9px',
+            minLength: 4,
+            palette: ['#57aa83', '#c13f43', '#2c497d', '#8965ad', '#686d7b', '#fd625e', '#d7d7d9', '#2e67c6'],
+            rotate: true
+          },
+          plotarea: {
+            margin: '15px 15px'
+          }
+        },
+        {
+          type: 'rankflow',
+          backgroundColor: '#272a36',
+          width: '100%',
+          height: '50%',
+          x: '0%',
+          y: '50%',
+          options: {
+            colorType: 'palette',
+            palette: ['#57aa83', '#c1434f', '#2c497d', '#8965ad', '#686d7b'],
+            style: {
+              tooltip: {
+                backgroundColor: '#18181b',
+                borderColor: 'none',
+                borderRadius: '8px',
+                borderWidth: '0px',
+                fontColor: '#ffffff',
+                fontSize: '11px',
+                shadow: false
+              },
+              flow: {
+                borderColor: 'none',
+                borderWidth: '0px',
+                shadow: false
+              },
+              itemFlow: {
+                fontColor: '#ffffff',
+                fontSize: '11px'
+              },
+              labelOverall: {
+                text: 'OVERALL RANK',
+                fontWeight: 'bold'
+              },
+              rankLeft: {
+                visible: 0
+              },
+              rankOverall: {
+                backgroundColor: '#393d4b',
+                fontColor: '#d8d9db',
+                fontSize: '11px'
+              },
+              rankRight: {
+                visible: 0
+              }
+            }
+          },
+          plotarea: {
+            margin: '15 25 25 45'
+          },
+          scaleX: {
+            values: ['Food Quality', 'Complaints', 'Avg. Meal Cost (2)'],
+            item: {
+              fontColor: '#b1b5bf',
+              fontSize: '11px',
+              fontWeight: 'normal'
+            },
+            labels: ['Food Quality', 'Complaints', 'Avg. Meal Cost (2)']
+          },
+          series: [{
+              text: 'Café Caterwaul',
+              rank: 2,
+              ranks: [5, 1, 2]
+            },
+            {
+              text: 'Plutarch',
+              rank: 1,
+              ranks: [3, 3, 1]
+            },
+            {
+              text: 'Eden Parlor',
+              rank: 3,
+              ranks: [1, 4, 5]
+            },
+            {
+              text: 'Naiveté Sushi',
+              rank: 4,
+              ranks: [2, 2, 4]
+            },
+            {
+              text: 'Flying Chaucer',
+              rank: 5,
+              ranks: [4, 5, 3]
+            }
+          ]
+        }
+      ]
+    };
+
+    // RENDER CHARTS
+    // -----------------------------
+    zingchart.render({
+      id: 'myChart',
+      data: chartConfig
+    });
+  </script>
+</body>
+
+</html>

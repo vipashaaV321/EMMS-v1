@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Employees' Attendance</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js">
+  </script>
+  <script type="text/javascript">
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['Work',     11],
+        ['Eat',      2],
+        ['Commute',  2],
+        ['Watch TV', 2],
+        ['Sleep',    7]
+      ]);
+
+      var options = {
+        title: 'My Daily Activities',
+        pieHole: 0.4,
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+      chart.draw(data, options);
+    }
+  </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   
+    
+  <style>
+    .main{
+      width:100%;
+      height:100%;
+      padding:10px;
+    }
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 600px;}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    .att{
+      width:100%;
+      height: 10%;
+      background-color: rgb(244, 246, 248);
+      padding: 10px;
+      margin-top: 20px;
+    }
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+</head>
+<body onload="init()">
+  <div class="w3-bar w3-wide  w3-card" style="background-color: #006699;color: #fff;padding: 6px;">
+    <a href="#" class="w3-bar-item w3-button">
+      <i class='fas fa-chalkboard-teacher' style="color: #fff"></i>Attendance & Leaves</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSdjxZToeGrhxFElKuh1PiwWrkkRhemwvf3kIU_ePiKwefxTeA/viewform?vc=0&c=0&w=1&fbzx=-6061386121030176905" class="w3-bar-item w3-button">CONFIRMATION</a> -->
+      <a href="leave_application.html" class="w3-bar-item w3-button">LEAVES_APPLICATION</a>
+      <a href="log_emms1.html" class="w3-bar-item w3-button">LOG_OUT</a>
+    
+    </div>
+  </div><br>
+  <div class="att">
+    <button id="b" onclick="dat()" style="padding: 10px;color: #fff;background-color: #006699;border: none;margin-left: 500px;">Click to confirm your presence</button><br><br>
+    <input type="text" id="a" placeholder="TIME" style="padding:10px;margin-left: 420px;"> 
+    <input type="text" id="c" placeholder="EMPLOYEE-ID" style="padding:10px;">
+    
+  </div><hr>
+  
+  <div class="progress" style="width: 90%;margin-left: 60px;">
+    <p style="font-size:15px"> Left Leaves : Left</p> <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:90%;background-color:royalblue">11</div>
+  </div>
+  <hr>
+  <script>
+    function dat(){
+    var d = new Date();
+    document.getElementById("a").value = d;
+    document.getElementById("c").value = "3217";}
+    </script>
+    <div class="main">
+      <div id="chart_div" style="width: 900px; height: 500px;margin-left: 150px;"></div><hr>
+         
+      <hr>
+      <div id="piechart" style="float: left;"></div>
+        <div id="chartContainer" style="height: 300px; width: 50%;margin-left: 300px;"></div>
+    
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Month', 'Leaves'],
+  ['Oct', 8],
+  ['Nov', 2],
+  ['Dec', 4],
+  ['Jan', 2],
+  ['Feb', 1]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'Leaves (%):2019-2020', 'width':550, 'height':400};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
+</div>
+</body>
+<script type="text/javascript">
+  window.onload = function () {
+  
+  var chart = new CanvasJS.Chart("chartContainer", {
+    theme: "light1", // "light2", "dark1", "dark2"
+    animationEnabled: false, // change to true		
+    title:{
+      text: "Total Attendance (%)"
+    },
+    data: [
+    {
+      // Change type to "bar", "area", "spline", "pie",etc.
+      type: "column",
+      dataPoints: [
+        { label: "oct",  y: 90  },
+        { label: "nov", y: 99 },
+        { label: "dec", y: 92  },
+        { label: "jan",  y: 98  },
+        { label: "feb",  y: 100  }
+      ]
+    }
+    ]
+  });
+  chart.render();
+  
+  }
+  </script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawVisualization);
+  function drawVisualization() {
+    // Some raw data (not necessarily accurate)
+    var data = google.visualization.arrayToDataTable([
+      ['Month', 'Total hours', 'Total overtime hours', 'total meeting hours', 'Attendance in Conference-Seminar(%)', 'Total Attendance as Mentor(%)', 'All over Attendance(%)','Total Half leaves(%)','Rejected leaves'],
+      ['Oct',  125,         20,             20,           91,      99,100,20,10],
+      ['Nov',  135,      20,        10,             99,          81,      82,10,0],
+      ['Dec',  120,      10,        25,             92,           98,      92,0,10],
+      ['Jan',  130,      0,        30,             80,           85,      91,0,10],
+      ['Feb',  136,      40,        40,             93,          92,      99,10,0]
+    ]);
+
+    var options = {
+      title : 'Average Attendance (oct:2019-feb:2020)',
+      vAxis: {title: 'Attendence'},
+      hAxis: {title: 'Month'},
+      seriesType: 'bars',
+      series: {5: {type: 'line'}}        };
+
+    var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+  }
+</script> 
+    
+</html>

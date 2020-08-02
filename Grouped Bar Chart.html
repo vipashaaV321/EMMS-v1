@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ZingSoft Demo</title>
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <style>
+    .zc-body {
+      background: #fff;
+    }
+
+    .chart--container {
+      height: 100%;
+      width: 100%;
+      min-height: 530px;
+    }
+
+    .zc-ref {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="zc-body">
+
+  <div id="myChart" class="chart--container">
+    <a href="https://www.zingchart.com/" rel="noopener" class="zc-ref">Powered by ZingChart</a>
+  </div>
+
+
+  <script>
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+    // DEFINE CHART LOCATIONS (IDS)
+    // -----------------------------
+    // Main chart render location
+    var chartId = 'myChart';
+
+
+    // CHART CONFIG
+    // -----------------------------
+    var myConfig = {
+      "graphset": [{
+        "globals": {
+          "font-family": "Lato"
+        },
+        "type": "vbar",
+        "plotarea": {
+          "margin": "dynamic"
+        },
+        "scaleX": {
+          "values": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+          "item": {
+            "offsetY": -5,
+            "angle": 270
+          },
+          "tick": {
+            "size": 10
+          }
+        },
+        "scaleX2": {
+          "values": ["Q1", "Q2", "Q3", "Q4", "Q1", "Q2", "Q3", "Q4"],
+          "placement": "default",
+          "tick": {
+            "size": 58,
+            "placement": "cross"
+          },
+          "itemsOverlap": true,
+          "item": {
+            "offsetY": -55
+          }
+        },
+        "scaleX3": {
+          "values": ["2015", "2016"],
+          "placement": "default",
+          "tick": {
+            "size": 20,
+          },
+          "item": {
+            "offsetY": -15
+          }
+        },
+        "plot": {
+          "bars-space-left": 0.15,
+          "bars-space-right": 0.15
+        },
+        "tooltip": {
+          "visible": false
+        },
+        "crosshair-x": {
+          "line-width": "100%",
+          "alpha": 0.4,
+        },
+        "series": [{
+          "values": [95, 95, 86, 71, 84, 96, 103, 95, 105, 75, 92, 84, 95, 95, 86, 71, 84, 96, 103, 95, 105, 75, 92, 84],
+          "text": "Dell"
+        }, {
+          "values": [69, 68, 54, 48, 70, 74, 98, 70, 72, 68, 49, 69, 69, 68, 54, 48, 70, 74, 98, 70, 72, 68, 49, 69],
+          "text": "Apple"
+        }, {
+          "values": [51, 53, 47, 60, 48, 52, 75, 52, 55, 47, 60, 48, 51, 53, 47, 60, 48, 52, 75, 52, 55, 47, 60, 48],
+          "text": "Microsoft"
+        }, {
+          "values": [42, 43, 30, 40, 31, 48, 55, 46, 48, 32, 38, 38, 42, 43, 30, 40, 31, 48, 55, 46, 48, 32, 38, 38],
+          "text": "Oracle"
+        }]
+      }]
+    };
+
+
+    // RENDER CHART
+    // -----------------------------
+    zingchart.render({
+      id: chartId,
+      data: myConfig,
+      height: 560,
+      width: '100%'
+    });
+  </script>
+</body>
+
+</html>

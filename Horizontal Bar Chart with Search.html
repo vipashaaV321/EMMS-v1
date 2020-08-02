@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ZingChart Demo: Horizontal Bar Chart with Search</title>
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <style>
+    .zc-body {
+      margin: 10px;
+      padding: 10px;
+      background-color: #fff;
+    }
+
+    .zcdemo {
+      position: relative;
+    }
+
+    #filterbox {
+      position: absolute;
+      top: 6px;
+      left: calc(50% + 22px);
+      z-index: 999;
+    }
+
+    #filter {
+      padding: 3px 5px;
+      width: 110px;
+      height: auto;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .zc-ref {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="zc-body">
+
+  <div class="zcdemo">
+    <div id="filterbox">
+      <input type="text" id="filter">
+    </div>
+    <div id="myChart">
+      <a href="https://www.zingchart.com/" rel="noopener" class="zc-ref">Powered by ZingChart</a>
+    </div>
+  </div>
+
+  <script>
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"]; // DOM ELEMENTS
+    // -----------------------------
+    var zcId = 'myChart';
+    var zcFilter = document.querySelector('#filter');
+
+
+    // DEFINE DATA
+    // -----------------------------
+    // Tech data
+    var tech = [
+      ['Angular', 2016],
+      ['AngularJS', 2010],
+      ['Babbage Assembly', 1971],
+      ['Bash', 1989],
+      ['BASIC', 1964],
+      ['Bootstrap 4', 2018],
+      ['C++', 1985],
+      ['C#', 2002],
+      ['CakePHP', 2005],
+      ['Django', 2005],
+      ['Drupal', 2000],
+      ['Elixir', 2011],
+      ['Ember.js', 2012],
+      ['Erlang', 1999],
+      ['Flask', 2010],
+      ['Gensim', 2009],
+      ['Go', 2009],
+      ['Haskell', 1990],
+      ['HTML', 1993],
+      ['Java', 1996],
+      ['Javascript', 1996],
+      ['jQuery', 2006],
+      ['Kotlin', 2016],
+      ['Laravel', 2011],
+      ['Node.js', 2009],
+      ['Numpy', 2006],
+      ['PHP', 1995],
+      ['Python 2', 1991],
+      ['Python 3', 2009],
+      ['PyTorch', 2016],
+      ['React', 2013],
+      ['React Native', 2016],
+      ['Ruby on Rails', 2006],
+      ['Ruby', 1996],
+      ['Rust', 2015],
+      ['Sass', 2007],
+      ['Swift', 2014],
+      ['Tensorflow', 2016],
+      ['TypeScript', 2012],
+      ['Vue', 2014],
+      ['Windows 10', 2015],
+      ['WordPress', 2003]
+    ];
+
+    // Alpha-sort array
+    tech.sort(function(a, b) {
+      return b[1] - a[1];
+    });
+
+    // Get full year
+    var cyear = new Date().getFullYear();
+
+    // Get min. year
+    var minyear = Number.MAX_VALUE;
+    tech.map(function(el) {
+      minyear = Math.min(minyear, el[1]);
+    });
+
+    // Full data
+    var cdata = {
+      borderWidth: 1,
+      borderColor: '#ccc',
+      backgroundColor: '#eeeeee #f9f9f9',
+      type: 'line',
+      title: {
+        fontSize: 17,
+        text: 'How long has Technology \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 existed?'
+      },
+      source: {
+        fontSize: 11,
+        padding: '0 5',
+        offsetY: -4,
+        align: 'left',
+        url: 'https://howoldisit.glitch.me/',
+        target: '_blank',
+        text: 'Source: https://howoldisit.glitch.me/'
+      },
+      plotarea: {
+        margin: '40 20 45 20'
+      },
+      scaleX: {
+        offsetStart: 80,
+        minValue: minyear,
+        maxValue: cyear,
+        step: 10,
+        item: {
+          fontSize: 10
+        },
+        markers: [{
+          type: 'line',
+          range: [cyear],
+          valueRange: true,
+          lineColor: '#999',
+          lineWidth: 1,
+          labelPlacement: 'opposite',
+          label: {
+            fontSize: 11,
+            text: cyear
+          }
+        }]
+      },
+      scaleY: {
+        offsetStart: 10,
+        visible: false,
+        minValue: 0,
+        maxValue: tech.length,
+        step: 1
+      },
+      tooltip: {
+        align: 'left',
+        padding: 10,
+        fontSize: 13,
+        text: '<span style="font-size:21px;font-weight:bold;">%plot-text</span><br>Invented in %data-invented (%data-years years ago)'
+      },
+      plot: {
+        lineWidth: 8,
+        marker: {
+          visible: false,
+          borderWidth: 0
+        },
+        hoverState: {
+          visible: false
+        },
+        hoverMarker: {
+          visible: false
+        },
+        jsRule: 'plotJsRule()',
+        valueBox: {
+          type: 'first',
+          placement: 'left',
+          fontSize: 10,
+          fontWeight: 'normal',
+          text: '%plot-text (%data-years yrs)'
+        }
+      },
+      series: []
+    };
+
+    tech.map(function(el, idx) {
+      var plot = {
+        text: el[0],
+        dataTech: el[0].toLowerCase(),
+        dataInvented: el[1],
+        dataYears: cyear - el[1],
+        values: [
+          [el[1], idx],
+          [cyear, idx]
+        ]
+      };
+      cdata.series.push(plot);
+    });
+
+
+    // DEFINE CHART
+    // -----------------------------
+    // Main chart render location
+    var chartId = 'myChart';
+
+    // INPUT CHANGE EVENT
+    // -----------------------------
+    zcFilter.addEventListener('keyup', myHandler);
+
+    function myHandler() {
+      var filled = zcFilter.value.length !== 1;
+      if (filled) zingchart.exec(zcId, 'update');
+    }
+
+    zingchart.render({
+      id: zcId,
+      width: '100%',
+      height: 560,
+      output: 'svg',
+      data: cdata,
+      events: {
+        load: loaded
+      }
+    });
+
+
+    // CHART RENDERED
+    // -----------------------------
+    // Set CSS class to show chart after render
+    function loaded() {
+      var chart = document.querySelector('#' + chartId);
+      chart.classList.add('loaded');
+    }
+
+
+    // HELPER FNS
+    // -----------------------------
+
+    // Plot rule
+    function plotJsRule(p) {
+      var tech = p['data-tech'];
+      var isNotFound = tech.indexOf(zcFilter.value.toLowerCase()) === -1;
+      if (isNotFound) {
+        return {
+          lineColor: '#ccc'
+        };
+      }
+    };
+  </script>
+</body>
+
+</html>

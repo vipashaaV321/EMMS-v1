@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<title>Employee profile</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+body{
+  background-color:#c0e8fa;
+}
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif,Arial, Helvetica;
+}
+.checked {
+  color:rgb(243, 219, 4);
+}
+footer{
+  color: #fff;
+  padding: 5px;
+  height:30px;
+  line-height: 30px;
+}
+#i1{
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+  text-align: center;
+  color: #006699;
+}
+
+</style>
+
+  <div class="w3-bar w3-wide  w3-card" style="background-color: #006699;color: #fff;padding: 6px;">
+    <a href="cv.html" class="w3-bar-item w3-button">
+      <i class="fa fa-user" style="color: #fff;"></i><b> EMMS  </b>PROFILE</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="https://docs.google.com/spreadsheets/d/1fJjhcKl6Wvn7IUbewuqouiIwaUEuKk_9mLcYnuZU-lE/edit?usp=sharing" class="w3-bar-item w3-button">SCHEDULE</a>
+      <a href="notification_emp_emms.html" class="w3-bar-item w3-button"><i class="fa fa-bell"></i></a>
+      <a href="Emp_proj.html" class="w3-bar-item w3-button">PROJECTS</a>
+      <a href="Attendence.html" class="w3-bar-item w3-button">ATTENDENCE & LEAVES</a>
+      <a href="Achievement.html.html" class="w3-bar-item w3-button">ACHIVEMENTS</a>
+      <a href="log_emms1.html" class="w3-bar-item w3-button">LOG_OUT</a>
+    
+    </div>
+  </div>
+
+<body  style="background-color: #e6f7ff;">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-3">
+        <div class="w3-display-container">
+          <img src="PicsArt_10-07-08.58.46.png" style="width:100%; height: 370px" alt="Avatar">
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+            <h2 style="color: #fff;">vipasha Vaghela</h2>
+          </div>
+        </div>
+        <div class="w3-container">
+          <br>
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large " style="color:#006699"></i>Employee_id:32017</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large"style="color:#006699"></i>Ahmedabad,India</p>
+          <p><i class="fa fa-building-o  fa-fw w3-margin-right w3-large" aria-hidden="true"  style="color: #006699;"></i>Branch: Chandani chauk</p>
+          <p><i class="fa fa-calendar fa-fw w3-margin-right w3-large"style="color:#006699"></i>DOB: 03-02-1993</p>
+          <p><i class="fa fa-calendar fa-fw w3-margin-right w3-large"style="color:#006699"></i>DOJ: 26-11-2016</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large"style="color:#006699"></i>vipashavaghela321@mail.com</p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large "style="color:#006699"></i>8160992702</p>
+          <hr>
+          <h4><i class="fa fa-star fa-fw w3-margin-right w3-large "style="color:#006699"></i>Average Star Rating (/5)
+          </h4>
+          <span class="fa fa-star checked" style="font-size: 30px;margin:10px;"></span>
+<span class="fa fa-star checked" style="font-size: 30px;margin:10px;"></span>
+<span class="fa fa-star checked" style="font-size: 30px;margin:10px;"></span>
+<span class="fa fa-star checked" style="font-size: 30px;margin:10px;"></span>
+<span class="fa fa-star" style="font-size: 30px;margin:10px;"></span>
+<hr>
+          <i class="fa fa-facebook-official w3-hover-opacity" id="i1"></i>
+          <i class="fa fa-instagram w3-hover-opacity" id="i1"></i>
+         <i class="fa fa-snapchat w3-hover-opacity" id="i1"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity" id="i1"></i>
+        <i class="fa fa-twitter w3-hover-opacity" id="i1"></i>
+        <i class="fa fa-linkedin w3-hover-opacity" id="i1"></i>
+          <hr>
+
+          <p class="w3-large" style="font-size: 20px;"><b><i class="fa fa-asterisk fa-fw w3-margin-right " style="color: #006699;"></i>Skills</b></p>
+          <p>Angular</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge " style="width:100%;background-color:cornflowerblue;color: #fff;">98%</div>
+          </div><br>
+          <p>Python</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge " style="width:80%;background-color:#006699;color: #fff;">
+              <div class="w3-center w3-text-white">80%</div>
+            </div>
+          </div><br>
+          <p>Java</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge " style="width:75%;background-color:dodgerblue;color: #fff;">75%</div>
+          </div><br>
+          <p>PHP</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge " style="width:60%;background-color:lightskyblue;color: #fff;">50%</div>
+          </div>
+          <br>
+          <hr>
+          <h3 class="w3-text-grey w3-padding-16"><i class="fa fa-graduation-cap" aria-hidden="true" fa-fw w3-margin-right w3-xxlarge style="color: #006699;"></i>Education</h3>
+        
+          <!-- <div class="w3-container"> -->
+            <h5 class="w3-opacity"><b>IIT_DELHI</b></h5>
+            <h6 class="w3-text" style="color: #006699;"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2012 - 2014</h6>
+            <p>M.Tech</p><hr>
+          <!-- </div> -->
+          <!-- <div class="w3-container"> -->
+            <h5 class="w3-opacity"><b>NIT_HYDRABAD</b></h5>
+            <h6 class="w3-text" style="color: #006699;"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2009 - 2012</h6>
+            <p>B.Tech</p>
+          <!-- </div> -->
+          <!-- <p style="font-size: 20px;"><i class="fa fa-desktop" aria-hidden="true" style="color: #006699;"></i> Experience</p>
+            <p>Angular WebDevelopment</p> 
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="50" style="width:90%">
+                90%
+              </div>   
+          </div>
+          <p>MEAN STACK WebDevelopment</p>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="50" style="width:95%">
+              95%
+            </div>   
+        </div>
+        <p>FULL STACK WebDevelopment</p>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="50" style="width:85%">
+              85%
+            </div>   
+        </div> -->
+          <hr>
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right " style="color: #006699;"></i>Languages</b></p>
+          <!-- <p>English</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
+          </div>
+          <p>Hindi</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:90%"></div>
+          </div> -->
+          <br>
+          
+          <div class="progress">
+            <div class="progress-bar progress-bar-success w3-wide" role="progressbar" style="width:50%">
+              English
+            </div>
+            <div class="progress-bar progress-bar-danger w3-wide" role="progressbar" style="width:50%">
+              hindi
+            </div>
+            <hr>
+          </div>
+        
+        <hr>
+        
+         
+          
+          <div id="chartContainer" style="width: 100%; height: 300px;"></div>
+            <br>
+          
+
+        </div>
+        <div class="w3-display-bottomleft"></div>
+
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+  
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text" style="color: #006699"></i>Work Experience & Projects</h2>
+       
+        <div class="w3-container" style="font-size: 15px;">
+          <h4 class="w3-opacity"><b>Front End Developement Department</b></h4>
+          <h5 class="w3-text" style="color: #006699"><i class="fa fa-tasks fa-fw w3-margin-right"></i>25 Projects</h5>
+         
+          <hr>
+          <h4 class="w3-opacity"><b>Achievement</b></h4>
+          <h5 class="w3-text" style="color: #006699"><i class="fa fa-star fa-fw w3-margin-right"></i>100 Stars</h5>
+          <h5 class="w3-text" style="color: #006699"><i class="fa fa-trophy fa-fw w3-margin-right" aria-hidden="true"></i>32 Times "Employee of the Month" winner</h5>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h4 class="w3-opacity"><b>Web Developer</b></h4>
+          <h5 class="w3-text" style="color: #006699"><i class="fa fa-calendar fa-fw w3-margin-right"></i>nov-2014 - <span class="w3-tag w3-round" style="background-color: #006699">Current</span></h5>
+         
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b></b></h5>
+          <h4>PROJECTS ANALYSIS</h4>
+          <!-- <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2010 - Mar 2012</h6>
+          <p>master in webpages</p><br> -->
+           <div id="piechart"></div>
+           <p style="font-size: 20px;"><i class="fa fa-desktop" aria-hidden="true" style="color: #006699;"></i> Experience</p>
+          <p>Angular WebDevelopment</p> 
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="50" style="width:100%;background-color:rgb(55, 204, 122);">
+              100%
+            </div>   
+        </div>
+        <p>MEAN STACK WebDevelopment</p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="50" style="width:95%;">
+            95%
+          </div>   
+      </div>
+      <p>Python WebDevelopment with Serverside Scripting</p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="50" style="width:75%;background-color:rgb(233, 49, 85);">
+            85%
+          </div>   
+      </div>
+      <p>Java and Advanced Database</p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="50" style="width:70%;background-color:rgb(241, 93, 172);">
+            70%
+          </div>   
+      </div>
+      <p>FULL STACK WebDevelopment</p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="50" style="width:85%;background-color: rgb(98, 13, 134);">
+            95%
+          </div>   
+      </div>
+        </div>
+      </div>
+
+      <div class="w3-container w3-card w3-white">
+         <h3 class="w3-text-grey w3-padding"><i class="fa fa-address-card-o" aria-hidden="true" fa-fw w3-margin-right w3-xxlarge style="color: #006699;"></i> Employee's Presence</h3>
+        
+        <!--<div class="w3-container">
+          <h4 class="w3-opacity"><b>IIT_DELHI</b></h4>
+          <h5 class="w3-text" style="color: #006699;"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2012 - 2014</h5>
+          <p>M.Tech</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h4 class="w3-opacity"><b>NIT_HYDRABAD</b></h4>
+          <h5 class="w3-text" style="color: #006699;"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2009 - 2012</h5>
+          <p>B.Tech</p> -->
+          <!-- <p style="font-size: 20px;"><i class="fa fa-desktop" aria-hidden="true" style="color: #006699;"></i> Experience</p>
+          <p>Angular WebDevelopment</p> 
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="50" style="width:90%">
+              90%
+            </div>   
+        </div>
+        <p>MEAN STACK WebDevelopment</p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="50" style="width:95%">
+            95%
+          </div>   
+      </div>
+      <p>FULL STACK WebDevelopment</p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="50" style="width:85%">
+            85%
+          </div>   
+      </div> -->
+          <hr>
+          <div id="barchart_material" style="width: 740px; height: 555px;font-size: 14px;"></div>
+          <!-- <div id="chartContainer1" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script> -->
+        </div>
+
+      </div>
+
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+
+<script>
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['projects', ' per year'],
+  ['2014', 8],
+  ['2015', 2],
+  ['2016', 2],
+  ['2017', 2],
+  ['2018', 2],
+  ['2019', 8],
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'', 'width':700, 'height':380};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+
+
+
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+  animationEnabled: true,
+  exportEnabled: true,
+  title:{
+    text: "Employee of the Month Count"
+  },
+  axisY:{ 
+    title: "Percentage",
+    includeZero: false, 
+    interval: .2,
+    suffix: "%",
+    valueFormatString: "#.0"
+  },
+  data: [{
+    type: "stepLine",
+    yValueFormatString: "#0.0\"%\"",
+    xValueFormatString: "MMM YYYY",
+    markerSize: 5,
+    dataPoints: [
+      { x: new Date(2016, 0), y: 4.9 },
+      { x: new Date(2016, 1), y: 4.9 },
+      { x: new Date(2016, 2), y: 5.0 },
+      { x: new Date(2016, 3), y: 5.0, indexLabel: "Highest", indexLabelFontColor: "#C24642" },
+      { x: new Date(2016, 4), y: 4.7 },
+      { x: new Date(2016, 5), y: 4.9 },
+      { x: new Date(2016, 6), y: 4.9 },
+      { x: new Date(2016, 7), y: 4.9 },
+      { x: new Date(2016, 8), y: 4.9 },
+      { x: new Date(2016, 9), y: 4.8 },
+      { x: new Date(2016, 10), y: 4.6 },
+      { x: new Date(2016, 11), y: 4.7 },
+      { x: new Date(2017, 0), y: 4.8 },
+      { x: new Date(2017, 1), y: 4.7 },
+      { x: new Date(2017, 2), y: 4.5 },
+      { x: new Date(2017, 3), y:4.4 },
+      { x: new Date(2017, 4), y:4.3 },
+      { x: new Date(2017, 5), y:4.4 }
+    ]
+  }]
+});
+chart.render();
+
+}
+
+
+  $(function () {
+        $('#container').highcharts({
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Monthly Average Rainfall'
+            },
+            subtitle: {
+                text: 'Source: WorldClimate.com'
+            },
+            xAxis: {
+                categories: [
+                    'Jan',
+                    'Feb',
+                    'Mar',
+                    'Apr',
+                    'May',
+                    'Jun',
+                    'Jul',
+                    'Aug',
+                    'Sep',
+                    'Oct',
+                    'Nov',
+                    'Dec'
+                ]
+            },
+               yAxis: {
+                min: 0,
+                title: {
+                    text: 'Rainfall (mm)'
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Tokyo',
+                data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+
+            }, {
+                name: 'New York',
+                data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5, 106.6, 92.3]
+
+            }, {
+                name: 'London',
+                data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3, 51.2]
+
+            }, {
+                name: 'Berlin',
+                data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1]
+
+            }]
+        });
+      });
+</script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['bar']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Year', 'Attendence', 'Leaves', 'project-conference'],
+      ['2014', 90, 10, 5],
+      ['2015', 86, 14, 10],
+      ['2016', 100, 0, 16],
+      ['2017', 92, 8, 12],
+      ['2018', 94, 6, 10],
+      ['2019', 92, 8, 3]
+    ]);
+
+    var options = {
+      chart: {
+        title: 'Data of Attendence',
+        subtitle: 'Attendence, Leaves, and proj. Conferences (in %): 2014-2019',
+      },
+      bars: 'horizontal' // Required for Material Bar Charts.
+    };
+
+    var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+    chart.draw(data, google.charts.Bar.convertOptions(options));
+  }
+
+
+
+
+//   window.onload = function () {
+
+// var chart = new CanvasJS.Chart("chartContainer1", {
+// 	theme: "light1", // "light2", "dark1", "dark2"
+// 	animationEnabled: false, // change to true		
+// 	title:{
+// 		text: "Basic Column Chart"
+// 	},
+// 	data: [
+// 	{
+// 		// Change type to "bar", "area", "spline", "pie",etc.
+// 		type: "column",
+// 		dataPoints: [
+// 			{ label: "apple",  y: 10  },
+// 			{ label: "orange", y: 15  },
+// 			{ label: "banana", y: 25  },
+// 			{ label: "mango",  y: 30  },
+// 			{ label: "grape",  y: 28  }
+// 		]
+// 	}
+// 	]
+// });
+// chart.render();
+
+// }
+</script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

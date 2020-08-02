@@ -1,0 +1,133 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin:0;
+  background-color: aliceblue;
+  
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 13px;
+  background-color: white;
+ 
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #006699;
+  color: white;
+  padding: 16px 20px;
+  margin: 4px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 1;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+  background-color: #ccc;
+  color: #000;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+  height: 70px;
+}
+.nav{
+
+display:flex;
+flex-wrap:wrap;
+width:100%;
+background:#006699;
+}
+.nav{
+  top:0px;display:flex;background:#006699;}
+  .nav a{padding: 14px 20px ;color:#FFF;text-decoration:none;}
+.nav a{
+padding:11px 11px;
+color:#fff;
+text-decoration:none;
+font-size: 16px;
+}
+.nav a:hover{
+background:#ddd;
+color:#000;
+}
+</style>
+</head>
+<body>
+    <div class="nav">
+        <a href="sign_emms.html">SIGNUP</a>
+        <a href="1stPage_home.html" style="margin-left:83%"><i class="fa fa-home" aria-hidden="true" style="font-size: 20px;"></i></a>
+        <a href="log_emms1.html"><i class="fa fa-user-circle" aria-hidden="true" style="font-size: 20px;"></i></a>
+        <a href="contactus_emms.html"><i class="fa fa-volume-control-phone" aria-hidden="true" style="font-size: 20px;"></i></a>
+        </div>
+<form style="width:500px;width:500px;margin-left: 400px;margin-top: 30px;border-radius: 7px;box-shadow: 5px 5px 5px #ccc;">
+  <div class="container" style="text-align: center;">
+    <h1 style="color: #006699;">SIGNUP TO EMMS</h1>
+  
+    <hr>
+    <input type="text" placeholder="Enter Employee-id" required>
+    
+    <input type="text" placeholder="Enter Email" required>
+
+   
+    <input type="password" placeholder="Enter Password"  required>
+
+   
+    <input type="password" placeholder="Repeat Password"  required>
+    <hr>
+    
+
+    <button  class="registerbtn" onclick="alert('now you are part of emms! Login to continue in emms')">SIGNUP</button>
+  </div>
+  
+  <div class="container signin" style="background-color: #fff;">
+    <p>Already a part of emms? <a href="log_emms1.html">LOGIN</a>.</p>
+  </div>
+</form>
+<script>
+    function signup(){
+        alert('NOW you are part of emms,now login to continue in emms')
+    }
+</script>
+</body>
+</html>

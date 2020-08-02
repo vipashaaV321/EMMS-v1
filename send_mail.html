@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <head>
+        <style>
+            body{
+                box-sizing: border-box;
+                margin: 0;
+                background-color: #e1f0f7;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .table{
+                height: 660px;
+                width: 500px;
+                background-color: rgb(250, 252, 253);
+               margin-top: 19px;
+               margin-left: 390px;
+               padding: 27px;
+               /* border-radius: 4%; */
+               box-shadow: 3px 3px 7px 3px #717d83;
+               font-size: 13px;
+                }
+                #b1{
+                    padding: 10px;
+                    height:40px;
+                    width:120px;
+                    color: #fff;
+                    background-color: #006699;
+                    border: none;
+                    font-size: 15px;
+                    margin-right: 10px;
+                    border-radius: 7%;
+                    margin-top: 5px;
+                }
+                #m{
+                    height:36px;
+                    border-radius: 4%;
+                    border: 1px solid #333;
+                    padding: 5px;
+                }
+        </style>
+    </head>
+<body>
+    <div class="w3-bar w3-wide w3-card" style="background-color: #006699;color: #fff;padding: 3px;">
+        <div class="w3-bar-item w3-button">PROJECT_CONFERENCE_NOTIFIER</div>
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+          <a href="add.html" class="w3-bar-item w3-button"><i class="fa fa-plus-square-o" aria-hidden="true" style="font-size: 20px;"></i></a>
+          <a href="Project_evalution.html" class="w3-bar-item w3-button">EVALUTION</a>
+          <a href="project.html" class="w3-bar-item w3-button">PROJECTS</a>
+          <a href="log_emms1.html" class="w3-bar-item w3-button">LOG_OUT</a>
+        
+        </div>
+      </div>
+
+<div class="table">
+<form action="mailto:vipashavaghela321@gmail.com" method="post" enctype="text/plain">
+<input type="text" name="id" size="60" id="m" placeholder="EMPLOYEE_ID"><br><br>
+
+<input type="text" name="name" size="60" id="m" placeholder="EMPLOYEE_NAME"><br><br>
+
+<input type="text" name="mail" id="m" size="60" placeholder="E-MAIL_ID"><br><br>
+
+ <input type="text" name="PROJECT_NAME" size="60" id="m" placeholder="PROJECT_NAME"><br><br>
+ <input type="text" name="COMPANY" id="m" size="60" placeholder="COMPANY & CLIENTS"><br><br>
+ <input type="textarea" name="TEAM_MEMBERS" id="m" size="60" rows="3" placeholder="TEAM_MEMBERS" style="height: 60px;"><br><br>
+ <input type="text" name="TEAM_ID" id="m" size="60" placeholder="TEAM_ID"><br><br>
+ <input type="text" name="TEAM_LEADER" id="m" size="60" placeholder="TEAM_LEADER"><br><br>
+ <input type="text" name="MEETING_DATE" id="m" size="60" placeholder="MEETING_DATE"><br><br>
+ <input type="text" name="MEETING_TIME" id="m" size="60" placeholder="MEETING_TIME"><br><br>
+<input type="submit" value="SEND_MAIL" id="b1" style="margin-left: 90px;">
+<input type="reset" value="RESET" id="b1">
+</form>
+</div>
+</body>
+
+</html>

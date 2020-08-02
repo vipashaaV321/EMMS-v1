@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: rgb(242, 254, 255);
+}
+
+#myInput {
+  /* background-image: url('C:/html/search.png'); */
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  background-color: #fff;
+}
+#myTable1 {
+  border-collapse: collapse;
+  width: 100%;
+  padding-top: 7px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  background-color: #fff;
+}
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ccc;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #cde9f7;
+}
+</style>
+</head>
+<body>
+    
+    <div class="w3-bar w3-wide w3-padding w3-card" style="background-color: #006699;color: #fff">
+        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-users" aria-hidden="true"></i> <b> EMPLOYEES' </b>DETAILS</a>
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+          <a href="daily_detail.html" class="w3-bar-item w3-button"><i class="fa fa-files-o" aria-hidden="true" style="color: #fff;font-size: 18px;"></i></a>
+          <a href="add_emp_mang.html" class="w3-bar-item w3-button"><i class="fa fa-user-plus" aria-hidden="true" style="color: #fff;font-size: 18px;"></i></a>
+          <a href="delete_emp.html" class="w3-bar-item w3-button"><i class="fa fa-minus-circle" aria-hidden="true" style="color: #fff;font-size: 18px;"></i></a>
+          <a href="log_emms1.html" class="w3-bar-item w3-button"><i class="fa fa-sign-out" aria-hidden="true" style="color: #fff;font-size: 18px;"></i></a>
+          <a href="calender.html" data-toggle="popover" title="Popover Header" class="w3-bar-item w3-button" data-content="Whats on today"><i class="fa fa-calendar-o"></i></a>
+            
+        
+         
+        
+        </div>
+      </div>
+<table id="myTable1" style="background-color: rgb(247, 247, 247);">
+    <tr style="height: 40px;margin: 5px;"><td style="width: 5%;"><img src="search.png" style="height:40px;width: 45px;"></td><td style="width: 90%;">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="SEARCH EMPLOYEE'S NAME.." title="Type a name" style="margin-top: 10px;height: 40px;"></td>
+        </tr></table>
+        <table id="myTable">
+  <tr class="header">
+    <th style="width:23%;">Name</th>
+    <th style="width:15%;">Emp_ID</th>
+    
+    <th style="width:23%;">Department</th>
+    <th style="width:23%;">Contact</th>
+    <th style="width:23%;">City</th>
+  </tr>
+  <tr>
+    
+    <td><a href="mrxyz_emms.html">Mr. XYZ</a></td>
+    <td><a href="MRXYZ.html">3217</a></td>
+    <td>web-Development</td>
+    <td>8160992733</td>
+    <td>Delhi</td>
+  </tr>
+  <tr>
+    <td><a href="cv.html">abc</a></td>
+    <td>32017</td>
+    <td>web-Development</td>
+    <td>8160992702</td>
+    <td>Delhi</td>
+  </tr>
+  
+  <tr>
+    <td><a href="cv.html">aXYZ</a></td>
+    <td>32017</td>
+    <td>web-Development</td>
+    <td>8160992702</td>
+    <td>Delhi</td>
+  </tr>
+  <tr>
+    <td><a href="missxyz_emms.html">Miss xyz</a></td>
+    <td>32017</td>
+    <td>web-Development</td>
+    <td>8160992702</td>
+    <td>Delhi</td>
+   
+  </tr>
+  <tr>
+    <td><a href="vipasha_emms.html">vipasha</a></td>
+    <td><a href="vips_data.html">32017</a></td>
+    <td>web-Development</td>
+    <td>8160992702</td>
+    <td>ahmedabad</td>
+   
+  </tr>
+  <tr>
+    <td><a href="cv.html">saakshi</a></td>
+    <td>32017</td>
+    <td>web-Development</td>
+    <td>8160992702</td>
+    <td>Delhi</td>
+  </tr>
+  <tr>
+    <td><a href="cv.html">charmi</a></td>
+    <td>32017</td>
+    <td>web-Development</td>
+    <td>8160992702</td>
+    <td>Delhi</td>
+  </tr>
+  <tr id="del">
+    <td><a href="cv.html">pqr</a></td>
+    <td>32017</td>
+    <td>web-Development</td>
+    <td>8160992702</td>
+    <td onclick="">Delete</td>
+  </tr>
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+<script>
+  $(document).ready(function(){
+      $('[data-toggle="popover"]').popover();   
+  });
+  </script>
+</body>
+</html>

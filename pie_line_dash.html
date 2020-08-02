@@ -1,0 +1,370 @@
+<html class="zc-html">
+
+<head>
+  <meta charset="utf-8">
+  <title>ZingSoft Demo</title>
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <style>
+    .zc-body {
+      background: #fff;
+    }
+
+    .chart--container {
+      height: 100%;
+      width: 100%;
+      min-height: 530px;
+    }
+
+    .zc-ref {
+      display: none;
+    }
+  </style>
+</head>
+​
+
+<body class="zc-body">
+  ​
+  <div id="myChart" class="chart--container">
+    <a href="https://www.zingchart.com/" rel="noopener" class="zc-ref">Powered by ZingChart</a>
+  </div>
+
+  <script>
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+    let chartData = {
+      graphset: [{
+          type: 'line',
+          backgroundColor: '#00BAF0 #0C9BBC',
+          fontFamily: 'Arial',
+          width: '100%',
+          x: '0px',
+          y: '0px',
+          title: {
+            text: '2019 Total Sales',
+            paddingLeft: '25px',
+            backgroundColor: 'none',
+            fontColor: '#ffffff',
+            fontFamily: 'Arial',
+            fontSize: '22px',
+            fontWeight: 'normal',
+            height: '70px',
+            textAlign: 'left'
+          },
+          subtitle: {
+            text: 'Sales shown by month',
+            paddingTop: '20px',
+            paddingLeft: '25px',
+            alpha: 0.7,
+            fontColor: '#ffffff',
+            fontFamily: 'Arial',
+            fontSize: '13px',
+            fontStyle: 'italic',
+            fontWeight: 'normal',
+            height: '40px',
+            textAlign: 'left'
+          },
+          plot: {
+            tooltip: {
+              text: '%k: %v',
+              padding: '5px 10px',
+              backgroundColor: '#016B8B',
+              borderRadius: '6px',
+              shadow: false,
+              thousandsSeparator: ','
+            },
+            alphaArea: 1,
+            hoverMarker: {
+              type: 'circle',
+              backgroundColor: '#016B8B',
+              borderWidth: '1px',
+              size: '6px'
+            },
+            hoverState: {
+              visible: false
+            },
+            lineColor: '#ffffff',
+            lineWidth: '2px',
+            marker: {
+              type: 'circle',
+              backgroundColor: '#0C9BBC',
+              borderColor: '#ffffff',
+              borderWidth: '1px',
+              shadow: false,
+              size: '5px'
+            },
+            shadow: false,
+            stacked: true
+          },
+          plotarea: {
+            marginTop: '40px',
+            marginRight: '30px',
+            marginBottom: '5px',
+            marginLeft: '30px',
+            backgroundColor: 'none'
+          },
+          scaleX: {
+            values: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+            guide: {
+              visible: false
+            },
+            visible: false
+          },
+          scaleY: {
+            guide: {
+              visible: false
+            },
+            visible: false
+          },
+          series: [{
+            values: [1748, 1180, 1235, 958, 1089, 1658, 1822, 2174, 1543, 1702, 1498, 1016]
+          }]
+        },
+        {
+          type: 'pie',
+          backgroundColor: '#F4F4F4 #EAEAEA',
+          fontFamily: 'Arial',
+          width: '50%',
+          height: '50%',
+          x: '0px',
+          y: '50%',
+          title: {
+            text: 'Top Month',
+            paddingLeft: '25px',
+            backgroundColor: 'none',
+            fontColor: '#505050',
+            fontFamily: 'Arial',
+            fontSize: '18px',
+            fontWeight: 'normal',
+            height: '70px',
+            textAlign: 'left'
+          },
+          subtitle: {
+            text: 'August',
+            paddingTop: '20px',
+            paddingLeft: '25px',
+            alpha: 0.7,
+            fontColor: '#505050',
+            fontFamily: 'Arial',
+            fontSize: '13px',
+            fontStyle: 'italic',
+            fontWeight: 'normal',
+            height: '40px',
+            textAlign: 'left'
+          },
+          plot: {
+            tooltip: {
+              visible: false
+            },
+            valueBox: {
+              alpha: 1,
+              connected: false,
+              lineWidth: '10px'
+            },
+            slice: 35
+          },
+          plotarea: {
+            marginTop: '5px',
+            marginRight: '5%',
+            marginBottom: '0px',
+            marginLeft: '10%',
+            backgroundColor: 'none'
+          },
+          scaleR: {
+            refAngle: 40
+          },
+          labels: [{
+            text: '2,174',
+            anchor: 'c',
+            fontColor: '#505050',
+            fontFamily: 'arial',
+            fontSize: '20px',
+            x: '52.5%',
+            y: '50%'
+          }],
+          series: [{
+              text: 'Internet',
+              values: [64],
+              valueBox: {
+                fontColor: '#E25833',
+                fontSize: '11px',
+                fontStyle: 'italic',
+                offsetX: '10px',
+                offsetY: '0px'
+              },
+              backgroundColor: '#ff9525 #fc6222',
+              borderColor: '#F4F4F4',
+              shadow: false
+            },
+            {
+              text: 'Retail',
+              values: [36],
+              valueBox: {
+                fontColor: '#5D7F13',
+                fontSize: '11px',
+                fontStyle: 'italic',
+                offsetX: '-10px',
+                offsetY: '0px'
+              },
+              backgroundColor: '#9dc644 #608215',
+              borderColor: '#F4F4F4',
+              shadow: false
+            }
+          ]
+        },
+        {
+          type: 'line',
+          backgroundColor: '#F4F4F4 #EAEAEA',
+          fontFamily: 'Arial',
+          width: '50%',
+          height: '50%',
+          x: '50%',
+          y: '50%',
+          title: {
+            text: '2019 Sales by Type',
+            paddingLeft: '25px',
+            backgroundColor: 'none',
+            fontColor: '#505050',
+            fontFamily: 'Arial',
+            fontSize: '18px',
+            fontWeight: 'normal',
+            height: '70px',
+            textAlign: 'left'
+          },
+          subtitle: {
+            text: 'Sales shown by month',
+            paddingTop: '20px',
+            paddingLeft: '25px',
+            alpha: 0.7,
+            fontColor: '#505050',
+            fontFamily: 'Arial',
+            fontSize: '13px',
+            fontStyle: 'italic',
+            fontWeight: 'normal',
+            height: '40px',
+            textAlign: 'left'
+          },
+          legend: {
+            margin: '80% 10% auto auto',
+            backgroundColor: 'none',
+            borderWidth: '0px',
+            item: {
+              alpha: 0.7,
+              fontColor: '#505050'
+            },
+            layout: 'float',
+            shadow: false,
+            textAlign: 'left'
+          },
+          plot: {
+            alphaArea: 1,
+            hoverState: {
+              visible: false
+            },
+            shadow: false,
+            thousandsSeparator: ',',
+            tooltipText: '%t views: %v'
+          },
+          plotarea: {
+            marginTop: '80px',
+            marginRight: '30px',
+            marginBottom: '40px',
+            marginLeft: '30px',
+            backgroundColor: 'none'
+          },
+          scaleX: {
+            values: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+            guide: {
+              visible: false
+            },
+            visible: false
+          },
+          scaleY: {
+            guide: {
+              visible: false
+            },
+            visible: false
+          },
+          series: [{
+              text: 'Internet',
+              values: [1008, 755, 725, 556, 677, 1140, 1144, 1183, 822, 1006, 793, 584],
+              tooltip: {
+                text: '%k: %v',
+                padding: '5px 10px',
+                backgroundColor: '#E25833',
+                borderRadius: '6px',
+                shadow: false
+              },
+              hoverMarker: {
+                type: 'circle',
+                backgroundColor: '#E25833',
+                borderWidth: '1px',
+                size: '6px'
+              },
+              legendMarker: {
+                type: 'circle',
+                backgroundColor: '#F4F4F4',
+                borderColor: '#E25833',
+                borderWidth: '1px',
+                shadow: false,
+                size: '5px'
+              },
+              lineColor: '#E25833',
+              lineWidth: '2px',
+              marker: {
+                type: 'circle',
+                backgroundColor: '#F4F4F4',
+                borderColor: '#E25833',
+                borderWidth: '1px',
+                shadow: false,
+                size: '5px'
+              }
+            },
+            {
+              text: 'Retail',
+              values: [740, 425, 510, 402, 412, 518, 678, 991, 721, 696, 705, 432],
+              tooltip: {
+                text: '%k: %v',
+                padding: '5px 10px',
+                backgroundColor: '#5D7F13',
+                borderRadius: '6px',
+                shadow: false
+              },
+              hoverMarker: {
+                type: 'circle',
+                backgroundColor: '#5D7F13',
+                borderWidth: '1px',
+                size: '6px'
+              },
+              legendMarker: {
+                type: 'circle',
+                backgroundColor: '#F4F4F4',
+                borderColor: '#5D7F13',
+                borderWidth: '1px',
+                shadow: false,
+                size: '5px'
+              },
+              lineColor: '#5D7F13',
+              lineWidth: '2px',
+              marker: {
+                type: 'circle',
+                backgroundColor: '#F4F4F4',
+                borderColor: '#5D7F13',
+                borderWidth: '1px',
+                shadow: false,
+                size: '5px'
+              }
+            }
+          ]
+        }
+      ]
+    };
+
+    zingchart.render({
+      id: 'myChart',
+      data: chartData,
+      height: '100%',
+      width: '100%',
+    });
+  </script>
+</body>
+
+</html>

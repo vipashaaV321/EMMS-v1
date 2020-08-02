@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ZingSoft Demo</title>
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <style>
+    .chart--container {
+      min-height: 530px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .zc-ref {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="myChart" class="chart--container">
+    <a class="zc-ref" href="https://www.zingchart.com/">Powered by ZingChart</a>
+  </div>
+  <script>
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+    let chartConfig = {
+      type: 'area',
+      stacked: true,
+      title: {
+        text: 'Analytics Comparison',
+        fontColor: '#4caee7'
+      },
+      subtitle: {
+        text: 'Referral Web Traffic ',
+        fontColor: '#cb8670'
+      },
+      plot: {
+        activeArea: true,
+        animation: {
+          delay: 50,
+          effect: 'ANIMATION_SLIDE_LEFT',
+          method: 'ANIMATION_REGULAR_EASE_OUT',
+          sequence: 'ANIMATION_NO_SEQUENCE',
+          speed: 1500
+        },
+        hoverMarker: {
+          size: '8px'
+        }
+      },
+      plotarea: {
+        backgroundColor: '#fff'
+      },
+      scaleX: {
+        lineColor: '#333',
+        maxItems: 6,
+        minValue: 1274313600000,
+        step: 600000,
+        tick: {
+          lineColor: '#333'
+        },
+        transform: {
+          type: 'date',
+          all: '%D, %d %M<br>%h:%i %A',
+          item: {
+            visible: false
+          }
+        }
+      },
+      scaleY: {
+        item: {
+          padding: '4px'
+        },
+        lineColor: '#333',
+        tick: {
+          lineColor: '#333'
+        }
+      },
+      series: [{
+          values: [11, 36, 7, 44, 11, 28, 42, 26, 13, 32, 12, 24, 16, 11, 43, 39],
+          backgroundColor: '#cb8670',
+          lineColor: '#cb8670',
+          marker: {
+            backgroundColor: '#cb8670',
+            borderColor: '#fff',
+            borderWidth: '2px'
+          }
+        },
+        {
+          values: [21, 29, 14, 16, 28, 35, 21, 18, 11, 7, 4, 9, 25, 15, 33, 13],
+          backgroundColor: '#4caee7',
+          lineColor: '#4caee7',
+          marker: {
+            backgroundColor: '#4caee7',
+            borderColor: '#fff',
+            borderWidth: '2px'
+          }
+        }
+      ]
+    };
+
+    zingchart.render({
+      id: 'myChart',
+      data: chartConfig,
+      height: '100%',
+      width: '100%'
+    });
+  </script>
+</body>
+
+</html>

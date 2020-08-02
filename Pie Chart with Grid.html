@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ZingSoft Demo</title>
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <style>
+    .chart--container {
+      min-height: 530px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .zc-ref {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="myChart" class="chart--container">
+    <a class="zc-ref" href="https://www.zingchart.com/">Powered by ZingChart</a>
+  </div>
+  <script>
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+    let chartConfig = {
+      globals: {
+        fontFamily: 'Lucida Sans Unicode'
+      },
+      graphset: [{
+          type: 'pie',
+          width: '362px',
+          height: '250px',
+          x: '0px',
+          y: '0px',
+          plot: {
+            valueBox: {
+              text: '%data-index',
+              color: '#000',
+              connector: {
+                visible: false
+              },
+              fontSize: '11px',
+              fontWeight: 'normal',
+              offsetR: '55%'
+            },
+            borderWidth: '0px',
+            refAngle: 90
+          },
+          plotarea: {
+            margin: '30px'
+          },
+          tooltip: {
+            text: '<b style=\'font-size:17px;\'>%node-percent-value%</b><br>%plot-text',
+            padding: '10px',
+            backgroundColor: '#fff',
+            borderColor: '#666',
+            borderRadius: '11px',
+            borderWidth: '1px',
+            color: '#000',
+            shadow: true,
+            textAlign: 'left'
+          },
+          series: [{
+              text: 'Technical',
+              values: [1023],
+              backgroundColor: '#FF9000',
+              dataIndex: 1
+            },
+            {
+              text: 'Creative',
+              values: [614],
+              backgroundColor: '#9DCC09',
+              dataIndex: 2
+            },
+            {
+              text: 'Management',
+              values: [204],
+              backgroundColor: '#71BDE9',
+              dataIndex: 3
+            },
+            {
+              text: 'Marketing',
+              values: [143],
+              backgroundColor: '#DE6829',
+              dataIndex: 4
+            },
+            {
+              text: 'Other',
+              values: [61],
+              backgroundColor: '#EDCE00',
+              dataIndex: 5
+            }
+          ]
+        },
+        {
+          type: 'grid',
+          width: '375px',
+          height: '250px',
+          x: '362px',
+          y: '0px',
+          options: {
+            colLabels: [' ', 'TYPE', 'PCT', 'TOTAL'],
+            colWidths: ['30', '50%', '20%', '30%'],
+            style: {
+              '.th': {
+                backgroundColor: '#fff',
+                borderRight: '0px solid #fff',
+                borderBottom: '1px solid #aaa',
+                color: '#666',
+                fontSize: '10px',
+                fontWeight: 'normal',
+              },
+              '.td': {
+                backgroundColor: '#fff',
+                borderRight: '0px solid #fff',
+                borderBottom: '1px solid #aaa',
+                fontWeight: 'normal',
+                height: '30px',
+              },
+              '.td_1': {
+                paddingLeft: '38px',
+                offsetX: '-30px',
+              },
+              '.td_2': {
+                paddingLeft: '38px',
+                offsetX: '-30px',
+              },
+              '.td_3': {
+                paddingLeft: '38px',
+                offsetX: '-30px',
+              },
+              '.td_0_0': {
+                backgroundColor: '#FF9900',
+                borderColor: 'none',
+                borderRadius: '21px',
+                borderTop: null,
+                borderRight: null,
+                borderBottom: null,
+                borderLeft: null,
+                borderWidth: '8px',
+                color: '#000',
+                textAlign: 'center',
+              },
+              '.td_1_0': {
+                backgroundColor: '#9DCC09',
+                borderColor: 'none',
+                borderRadius: '21px',
+                borderTop: null,
+                borderRight: null,
+                borderBottom: null,
+                borderLeft: null,
+                borderWidth: '8px',
+                color: '#000',
+                textAlign: 'center',
+              },
+              '.td_2_0': {
+                backgroundColor: '#71BDE9',
+                borderColor: 'none',
+                borderRadius: '21px',
+                borderTop: null,
+                borderRight: null,
+                borderBottom: null,
+                borderLeft: null,
+                borderWidth: '8px',
+                color: '#000',
+                textAlign: 'center',
+              },
+              '.td_3_0': {
+                backgroundColor: '#DE6829',
+                borderColor: 'none',
+                borderRadius: '21px',
+                borderTop: null,
+                borderRight: null,
+                borderBottom: null,
+                borderLeft: null,
+                borderWidth: '8px',
+                color: '#000',
+                textAlign: 'center',
+              },
+              '.td_4_0': {
+                backgroundColor: '#EDCE00',
+                borderRadius: '21px',
+                borderColor: 'none',
+                borderTop: null,
+                borderRight: null,
+                borderBottom: null,
+                borderLeft: null,
+                borderWidth: '8px',
+                color: '#000',
+                textAlign: 'center',
+              }
+            }
+          },
+          plotarea: {
+            margin: '15px 0px 0px 0px'
+          },
+          series: [{
+              values: ['1', 'Technical', '50%', '1023']
+            },
+            {
+              values: ['2', 'Creative', '30%', '614']
+            },
+            {
+              values: ['3', 'Management', '10%', '204']
+            },
+            {
+              values: ['4', 'Marketing', '7%', '143']
+            },
+            {
+              values: ['5', 'Other', '3%', '61']
+            }
+          ]
+        }
+      ]
+    };
+
+    zingchart.render({
+      id: 'myChart',
+      data: chartConfig,
+      modules: 'grid',
+      height: '100%',
+      width: '100%',
+    });
+  </script>
+</body>
+
+</html>
